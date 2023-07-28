@@ -4,8 +4,6 @@ Fanfury
 
 # Setting Up a Genesis Fury Validator
 
-# Launching Fury
-
 This document includes instructions for validators who intend to participate in the launch of the Fury mainnet. Please note:
 
 1. This process is intended for technically inclined people who have participated in Fury testnets and other `cosmos-sdk` based blockchain launches. Experience running production IT systems is strongly recommended.
