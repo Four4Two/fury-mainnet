@@ -1,4 +1,6 @@
-# [https://github.com/four4two/mainnet-gentx/assets/banner.png]
+Fanfury
+
+![Banner!](assets/banner.png)
 
 # Setting Up a Genesis Fury Validator
 
