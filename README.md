@@ -4,496 +4,166 @@ Fanfury
 
 # Setting Up a Genesis Fury Validator
 
-This guide will provide instructions on setting up a node, submitting a gentx, and other
-tasks needed to participate in the launch of the Fury mainnet.
+# Launching Kava
 
-The primary point of communication for the genesis process and future
-updates will be the \#validators channel on the [Fury
-Discord](https://discord.gg/FAarwSC8Tr). This channel is private by
-default in order to keep it free of spam and unnecessary noise. To join
-the channel, please send a message to @Meow#6669 to add yourself and any
-team members.
+This document includes instructions for validators who intend to participate in the launch of the Kava mainnet. Please note:
 
-Some important notes on joining as a genesis validator:
+1. This process is intended for technically inclined people who have participated in Kava testnets and other `cosmos-sdk` based blockchain launches. Experience running production IT systems is strongly recommended.
+2. KAVA staked during genesis will be at risk of 5% slashing if your validator double signs. If you accidentally misconfigure your validator setup, this can easily happen, and slashed KAVA are not expected to be recoverable by any means. Additionally, if you double-sign, your validator will be tombstoned and you will be required to change operator and signing keys.
+3. You will be creating public key accounts that are restored via their mnemonic. It is vital that you securely backup and store your mnemonic for any accounts that are created during this process. **Failure to do so can result in the irrecoverable loss of all KAVA tokens**.
 
-1. **Gentxs must be submitted by End of Day UTC on June 30.**
-2. We highly recommend only experienced validators who have run on past
-    Cosmo SDK chains and have participated in a genesis ceremony before
-    become genesis validators on Fury.
-3. Furthermore, Fury intends to adopt many new custom low-level features such as
-    threshold decryption, custom bridges, and price oracles. Some of
-    these future upgrades may require validators to run additional
-    software beyond the normal node software, and validators should be
-    prepared to learn and run these.
-4. To be a genesis validator, you must have MER at genesis via the
-    fairdrop. Every address that had ATOMs during the Stargate upgrade
-    of the Cosmo Hub from `cosmoshub-3` to `cosmoshub-4` will have
-    recieve fairdrop MER. You can verify that a Cosmo address has
-    received coins in the fairdrop by inputting an address here:
-    <https://airdrop.fury.zone/>.
-
-## Hardware
-
-We recommend selecting an all-purpose server with:
-
-- 4 or more physical`<sup>`{=html}\[1\]`</sup>`{=html} CPU cores
-- At least 500GB of SSD disk storage
-- At least 32GB of memory
-- At least 100mbps network bandwidth
-
-As the usage of the blockchain grows, the server requirements may
-increase as well, so you should have a plan for updating your server as
-well.
-
-`<sup>`{=html}\[1\]`</sup>`{=html}: You'll often see 4 distinct physical
-cores as a machine with 8 logical cores due to hyperthreading. The
-distinct logical cores are helpful for things that are I/O bound, but
-threshold decryption will have validators running significant, non-I/O
-bound, computation, hence the need for physical cores. We are not
-launching with this parallelism, but we include the requirement as we
-expect parallelism in some form to be needed by validators in a
-not-so-distant future.
 
 ## Instructions
 
-These instructions are written targeting an Ubuntu 20.04 system.
-Relevant changes to commands should be made depending on the
-OS/architecture you are running on.
+* [Validator Sale Participants](#for-validator-sale-participants)
+* [Founder Rewards Participants](#for-founder-rewards-participants)
 
-### Install Go
+## For Validator Sale Participants
 
-Fury is built using Go and requires Go version 1.20 In this
-example, we will be installing Go on the above Ubuntu 20.04:
+You will be preparing two documents:
 
-``` {.sh}
-# First remove any existing old Go installation
-sudo rm -rf /usr/local/go
+1. `gentx.json` a signed transaction with your validator key that will create a validator at genesis with 50 self-delegated KAVA.
+2. `account.json` a json file containing the address and amount of KAVA tokens you will receive at this address. The tokens at this address will be subject to vesting terms based on the contract you signed.
 
-# Install the latest version of Go using this helpful script 
-curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+Once the documents are created, you will place them in a new directory in the `gentx` folder of this repo. Choose a unique directory name.
 
-# Update environment variables to include go
-cat <<'EOF' >>$HOME/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source $HOME/.profile
-```
+<br>
 
-To verify that Go is installed:
+#### Prepare documents
 
-``` {.sh}
-go version
-# Should return go version go1.20.2 linux/amd64
-```
+1. Install `fud` version v0.3.0
 
-### Get Fury Source Code
+##### Requires Go 1.13+
 
-Use git to retrieve Fury source code from the [official
-repo](https://github.com/four4two/fury), and checkout the
-`gentx-launch` tag, which contains the latest stable release.
-
-``` {.sh}
+```sh
 git clone https://github.com/four4two/fury
 cd fury
-git checkout v0.4.1
-```
-
-## Install fury
-
-You can now build Fury node software. Running the following command
-will install the executable fury (Fury node daemon) to your
-GOPATH.
-
-``` {.sh}
+git checkout v0.3.0
 make install
+fud init <your-validator-moniker> --chain-id fury-1
 ```
 
-### Verify Your Installation
+2. Create a key for your validator account. Back up the mnemonic and store the key information securely.
 
-Verify that everything is OK. If you get something *like* the following,
-you've successfully installed Fury on your system.
-
-``` {.sh}
-fury version --long
-
-name: fury
-server_name: fury
-version: '"0.4.1
-go: go version go1.20.2 darwin/amd64
+```sh
+fucli keys add <your-validator-key-name>
 ```
 
-If the software version does not match, then please check your `$PATH`
-to ensure the correct `fury` is running.
+3. Assign 50 KAVA to your validator
 
-### Save your Chain ID in fury config
-
-We recommend saving the mainnet `chain-id` into your `fury`'s
-client.toml. This will make it so you do not have to manually pass in
-the chain-id flag for every CLI command.
-
-``` {.sh}
-fury config chain-id highbury_710-1
+```sh
+fud add-genesis-account $(fucli keys show <your-validator-key-name> -a) 50000000ufury
 ```
 
-### Initialize your Node
+4. Sign a genesis transaction
 
-Now that your software is installed, you can initialize the directory
-for fury.
-
-``` {.sh}
-fury init --chain-id=highbury_710-1 <your_moniker>
+```sh
+fud gentx \
+  --amount 50000000ufury \
+  --commission-rate <commission_rate> \
+  --commission-max-rate <commission_max_rate> \
+  --commission-max-change-rate <commission_max_change_rate> \
+  --pubkey <consensus_pubkey> \
+  --name <key_name>
 ```
 
-This will create a new `.fury` folder in your HOME directory.
+**NOTE:**  If you would like to override the memo field use the `--ip` and `--node-id` flags for the `fud gentx` command above. `pubkey` can be obtained using `fud tendermint show-validator`
 
-### Download Pregenesis File
+5. Copy the gentx you created to a new directory in the `gentx` directory of this repo and name it `gentx.json`
 
-You can now download the "pregenesis" file for the chain. This is a
-genesis file with the chain-id and airdrop balances.
-
-``` {.sh}
-cd $HOME/.fury/config/
-curl https://raw.githubusercontent.com/osmosis-labs/networks/main/highbury_710-1/pregenesis.json > $HOME/.fury/config/genesis.json
+```sh
+cp $HOME/.fud/config/gentx/gentx-<node_id>.json ./gentx/<your-directory>/gentx.json
 ```
 
-### Import Validator Key
+6. Create a key for your vesting account
 
-The create a gentx, you will need the private key to an address that
-received an allocation in the airdrop.
-
-There are a couple options for how to import a key into `fury`.
-
-You can import such a key into `fury` via a mnemonic or exporting
-and importing a keyfile from an existing CLI.
-
-#### Import Via Mnemonic
-
-To import via mnemonic, you can do so using the following command and
-then input your mnemonic when prompted.
-
-``` {.sh}
-fury keys add <key_name> --recover
+```sh
+fucli keys add <your-vesting-account-key-name>
 ```
 
-#### Import From Another CLI
+7. Create an `account.json` file in your new directory
 
-If you have the private key saved in the keystore of another CLI (such
-as gaiad), you can easily import it into `fury` using the following
-steps.
-
-1. Export the key from an existing keystore. In this example we will
-    use gaiad. When prompted, input a password to encrypt the key file
-    with.
-
-``` {.sh}
-gaiad keys export <original_key_name>
+```sh
+printf '{"account": "", "amount": ""}\n' > ./gentx/<your-directory>/account.json
 ```
 
-2. Copy the output starting from the line that says
-    `BEGIN TENDERMINT PRIVATE KEY` and ending with the line that says
-    `END TENDERMINT PRIVATE KEY` into a txt file somewhere on your
-    machine.
-3. Import the key into `fury` using the following command. When
-    prompted for a password, use the same password used in step 1 to
-    encrypt the keyfile.
+8. Fill in the address and amount of ufury you expect to receive in the vesting account
 
-``` {.sh}
-fury keys import <new_key_name> ./path/to/key.txt 
+Example: If you expect to receive 100,000 KAVA
+
+  * Subtract 50 KAVA, which was allocated to your validator
+  * multiply by 10^6 to convert KAVA to ufury
+  * (100000 - 50) * 10^6 = 99950000000 ufury
+
+```json
+{
+  "account": "fury1...",
+  "amount": "99950000000ufury"
+}
 ```
 
-4. Delete the keyfile from your machine.
+9. Submit your directory, with `gentx.json` and `account.json` files, as a PR on this repo.
 
-#### Import via Ledger
+## For Founder Rewards Participants
 
-To import a key stored on a ledger, the process will be exactly the same
-as adding a ledger key to the CLI normally. You can connect a Ledger
-device with the Cosmo app open and then run:
+Eligible participants in the founder rewards program will submit an account that will be included in genesis:
 
-``` {.sh}
-fury keys add <key_name> --ledger
-```
+1. `account.json` a json file containing the address and amount of KAVA tokens you will receive at this address. The tokens will be immediately available and not bonded to a particular validator. Founder badge participants are free to create a validator immediately after launch.
 
-and follow any prompts.
+Once the `account.json` file is created, you will place it in a new directory in the `gentx` folder of this repo. Choose a unique directory name.
 
-#### Get your Tendermint Validator Pubkey
+#### Prepare documents
 
-You must get your validator's consensus pubkey as it will be necessary
-to include in the transaction to create your validator.
+1. Install `fud` version v0.3.0
 
-If you are using Tendermint's native `priv_validator.json` as your
-consensus key, you display your validator public key using the following
-command
+##### Requires Go 1.13+
 
-    fury tendermint show-validator
-
-The pubkey should be formatted with the bech32 prefix `furyvalconspub1`.
-
-If you are using a custom signing mechanism such as `tmkms`, please
-refer to their relevant docs to retrieve your validator pubkey.
-
-### Create GenTx
-
-Now that you have you key imported, you are able to use it to create
-your gentx.
-
-To create the genesis transaction, you will have to choose the following
-parameters for your validator:
-
-- moniker
-- commission-rate
-- commission-max-rate
-- commission-max-change-rate
-- min-self-delegation (must be \>1)
-- website (optional)
-- details (optional)
-- identity (keybase key hash, this is used to get validator logos in
-    block explorers. optional)
-- pubkey (gotten in previous step)
-
-Note that your gentx will be rejected if you use an amount greater than
-what you have as liquid from the fairdrop. Recall only 20% of your
-fairdrop allocation is liquid at genesis. Also, note that Fury has a
-chain-mandated minimum commission rate of 5%.
-
-If you would like to override the memo field, use the `--ip` and
-`--node-id` flags.
-
-An example genesis command would thus look like:
-
-``` {.sh}
-fury gentx <key_name> 1000000ufury \
-  --chain-id="highbury_710-1" \
-  --moniker=furywhale \
-  --website="https://fury.zone" \
-  --details="We love Merssis" \
-  --commission-rate="0.1" \
-  --commission-max-rate="0.20" \
-  --commission-max-change-rate="0.01" \
-  --min-self-delegation="1" \
-  --identity="5B5AB9D8FBBCEDC6" \
-  --pubkey="furyvalconspub1zcjduepqnxl4ntf8wjn0275smfll4n4lg9cwcurz2qt6dkhrjzf94up8g4cspyyzn9"
-```
-
-It will show an output something similar to:
-
-``` {.sh}
-Genesis transaction written to "/Users/ubuntu/.fury/config/gentx/gentx-eb3b1768d00e66ef83acb1eee59e1d3a35cf76fc.json"
-```
-
-
-## Instructions
-
-This guide assumes that you have completed the tasks involved in [Part
-1](#setting-up-a-genesis-fury-validator). You should be running on a
-machine that meets the [hardware requirements specified in Part
-1](#hardware) with [Go installed](#install-go). We are assuming you
-already have a daemon home (\$HOME/.fury) setup.
-
-These instructions are for creating a basic setup on a single node.
-Validators should modify these instructions for their own custom setups
-as needed (i.e. sentry nodes, tmkms, etc).
-
-These examples are written targeting an Ubuntu 20.04 system. Relevant
-changes to commands should be made depending on the OS/architecture you
-are running on.
-
-### Update fury to v1.0.0
-
-For the gentx creation, we used the `gentx-launch` branch of the
-[Fury codebase](https://github.com/four4two/fury).
-
-For launch, please update to the `v1.0.1` tag and rebuild your binaries.
-(The `v1.0.0` tag is also fine, `v1.0.1` just fixes a bug in displaying
-the version. The state machine for the two versions are identical)
-
-``` {.sh}
+```sh
 git clone https://github.com/four4two/fury
 cd fury
-git checkout v1.0.1
-
+git checkout v0.3.0
 make install
+
+fud init <your-moniker> --chain-id fury-1
 ```
 
-### Verify Your Installation
+2. Create a key for your account. Back up the mnemonic and store the key information securely.
 
-Verify that everything is OK. If you get something *like* the following,
-you've successfully installed Fury on your system. (scroll up to see
-above the list of dependencies)
-
-``` {.sh}
-fury version --long
-
-name: fury
-server_name: fury
-version: '"1.0.1"'
-commit: a20dab6d638da0883f9fbb9f5bd222affb8700ad
-build_tags: netgo,ledger
-go: go version go1.16.3 darwin/amd64
+```sh
+fucli keys add <your-account-key-name>
 ```
 
-If the software version does not match, then please check your `$PATH`
-to ensure the correct `fury` is running.
+3. Create an `account.json` file in a new directory in the `gentx` directory of this repo.
 
-### Save your Chain ID in fury config
 
-Fury reintroduces the client-side config that was removed in earlier
-Stargate versions of the Cosmo SDK.
-
-If you haven't done so already, please save the mainnet chain-id to your
-client.toml. This will make it so you do not have to manually pass in
-the chain-id flag for every CLI command.
-
-``` {.sh}
-fury config chain-id highbury_710-1
+```sh
+printf '{"account": "", "amount": ""}\n' > ./gentx/<your-directory>/account.json
 ```
 
-### Install and setup Cmervisor
+4. Fill in the address and amount of ufury you expect to receive in the account. Refer to the founder [documentation](https://github.com/Kava-Labs/fury/blob/master/docs/REWARDS.md) for reward amounts and eligibility.
 
-We highly recommend validators use cmervisor to run their nodes. This
-will make low-downtime upgrades more smoother, as validators don't have
-to manually upgrade binaries during the upgrade, and instead can
-preinstall new binaries, and cmervisor will automatically update them
-based on on-chain SoftwareUpgrade proposals.
+Example: If you expect to receive 3000 KAVA
 
-You should review the docs for cmervisor located here:
-<https://docs.cosmos.network/master/run-node/cmervisor.html>
+  * multiply by 10^6 to convert KAVA to ufury
+  * 3000 * 10^6 = 3000000000 ufury
 
-If you choose to use cmervisor, please continue with these
-instructions:
-
-Cmervisor is currently located in the Cosmo SDK repo, so you will need
-to download that, build cmervisor, and add it to you PATH.
-
-``` {.sh}
-git clone https://github.com/cosmos/cosmos-sdk
-cd cosmos-sdk
-git checkout v0.42.5
-make cmervisor
-cp cmervisor/cmervisor $GOPATH/bin/cmervisor
-cd $HOME
+```json
+{
+  "account": "fury1...",
+  "amount": "3000000000ufury"
+}
 ```
 
-After this, you must make the necessary folders for cosmosvisor in your
-daemon home directory (\~/.fury).
+5. Submit your directory, with `account.json` file, as a PR on this repo.
 
-``` {.sh}
-mkdir -p ~/.fury
-mkdir -p ~/.fury/cmervisor
-mkdir -p ~/.fury/cmervisor/genesis
-mkdir -p ~/.fury/cmervisor/genesis/bin
-mkdir -p ~/.fury/cmervisor/upgrades
-```
+## Helpful resources
 
-Cmervisor requires some ENVIRONMENT VARIABLES be set in order to
-function properly. We recommend setting these in your `.profile` so it
-is automatically set in every session.
+For resources that references `gaiacli`, you can replace `gaiacli` with `fucli`
 
-    echo "# Setup Cmervisor" >> ~/.profile
-    echo "export DAEMON_NAME=fury" >> ~/.profile
-    echo "export DAEMON_HOME=$HOME/.fury" >> ~/.profile
-    echo 'export PATH="$DAEMON_HOME/cmervisor/current/bin:$PATH"' >> ~/.profile
-    source ~/.profile
+* [Using the Cosmos app and a Ledger device to store your Kava keys](https://cosmos.network/docs/cosmos-hub/delegator-guide-cli.html#cosmos-accounts)
+* [Validator Security](https://cosmos.network/docs/cosmos-hub/validators/security.html#validator-security)
+* [Creating a validator after mainnet launch](https://cosmos.network/docs/cosmos-hub/validators/validator-setup.html#create-your-validator)
 
-Finally, you should move the fury binary into the cmervisor/genesis
-folder.
-
-    mv $GOPATH/bin/fury ~/.fury/cmervisor/genesis/bin
-
-### Download Genesis File
-
-You can now download the "genesis" file for the chain. It is pre-filled
-with the entire genesis state and gentxs.
-
-``` {.sh}
-curl https://media.githubusercontent.com/media/osmosis-labs/networks/main/highbury_710-1/genesis.json > ~/.fury/config/genesis.json
-```
-
-### Updates to config files
-
-You should review the config.toml and app.toml that was generated when
-you ran `fury init` last time.
-
-A couple things to highlight especially:
-
-- In the `launch-gentxs` branch, we defaulted the tendermint fast-sync
-    to be "v2". However, thanks to testing with partners from
-    [Skynet](http://skynet.paullovette.com/) and [Akash
-    Network](https://akash.network/), we've determined that "v2" is too
-    unstable for use in production, and so we recommend everyone
-    downgrade to "v0". In your config.toml, in the \[fastsync\] section,
-    change `version = "v2"` to `version = "v0"`.
-- We've defaulted nodes to having their gRPC and REST endpoints
-    enabled. If you do not want his (especially for validator nodes),
-    please turn these off in your app.toml
-- We have defaulted all nodes to maintaining 2 recent statesync
-    snapshots.
-- When it comes the min gas fees, our recommendation is to leave this
-    blank for now (charge no gas fees), to make the UX as seamless as
-    possible for users to be able to pay with whichever IBC asset they
-    bridge over. Then you can return to this in \~1 week and include
-    min-gas-price costs denominated in multiple different IBCed assets.
-    We're aware this is quite clunkly right now, and we will be working
-    on better mechanisms for this process. Here's to interchain UX
-    finally becoming a reality!
-
-### Reset Chain Database
-
-There shouldn't be any chain database yet, but in case there is for some
-reason, you should reset it.
-
-``` {.sh}
-fury unsafe-reset-all
-```
-
-### Start your node
-
-Now that everything is setup and ready to go, you can start your node.
-
-``` {.sh}
-cmervisor start
-```
-
-You will need some way to keep the process always running. If you're on
-linux, you can do this by creating a service.
-
-``` {.sh}
-sudo tee /etc/systemd/system/fury.service > /dev/null <<EOF  
-[Unit]
-Description=Fury Daemon
-After=network-online.target
-
-[Service]
-User=$USER
-ExecStart=$(which cmervisor) start
-Restart=always
-RestartSec=3
-LimitNOFILE=infinity
-
-Environment="DAEMON_HOME=$HOME/.fury"
-Environment="DAEMON_NAME=fury"
-Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
-Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-
-[Install]
-WantedBy=multi-user.target
-EOF
-```
-
-Then update and start the node
-
-``` {.sh}
-sudo -S systemctl daemon-reload
-sudo -S systemctl enable fury
-sudo -S systemctl start fury
-```
-
-You can check the status with:
-
-``` {.sh}
-systemctl status fury
-```
 
 ## Conclusion
 
@@ -516,7 +186,7 @@ is a derivative of ["Agoric Validator
 Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used
 under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric
 validator gudie is itself is a derivative of ["Validating Kava
-Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579)
+Mainnet"](https://medium.com/four4two/validating-fury-mainnet-72fa1b6ea579)
 by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC
 BY](http://creativecommons.org/licenses/by/4.0/). "Fury Validator
 Guide" is licensed under [CC
