@@ -28,7 +28,7 @@ Once the documents are created, you will place them in a new directory in the `g
 ##### Requires Go v1.20.2
 
 ```sh
-git clone https://github.com/Four4Two/futool-2
+git clone https://github.com/Four4Two/fury
 cd fury
 git checkout v0.4.1
 make install
