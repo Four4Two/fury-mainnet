@@ -1,4 +1,3 @@
-# mainnet-gentx
 # Setting Up a Genesis Fury Validator
 
 This guide will provide instructions on setting up a node, submitting a gentx, and other
@@ -22,10 +21,10 @@ Some important notes on joining as a genesis validator:
     these future upgrades may require validators to run additional
     software beyond the normal node software, and validators should be
     prepared to learn and run these.
-4. To be a genesis validator, you must have FURY at genesis via the
+4. To be a genesis validator, you must have MER at genesis via the
     fairdrop. Every address that had ATOMs during the Stargate upgrade
     of the Cosmo Hub from `cosmoshub-3` to `cosmoshub-4` will have
-    recieve fairdrop FURY. You can verify that a Cosmo address has
+    recieve fairdrop MER. You can verify that a Cosmo address has
     received coins in the fairdrop by inputting an address here:
     <https://airdrop.fury.zone/>.
 
@@ -264,7 +263,7 @@ fury gentx <key_name> 1000000ufury \
   --chain-id="highbury_710-1" \
   --moniker=furywhale \
   --website="https://fury.zone" \
-  --details="We love the Arsenal" \
+  --details="We love Merssis" \
   --commission-rate="0.1" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
@@ -278,3 +277,245 @@ It will show an output something similar to:
 ``` {.sh}
 Genesis transaction written to "/Users/ubuntu/.fury/config/gentx/gentx-eb3b1768d00e66ef83acb1eee59e1d3a35cf76fc.json"
 ```
+
+
+## Instructions
+
+This guide assumes that you have completed the tasks involved in [Part
+1](#setting-up-a-genesis-fury-validator). You should be running on a
+machine that meets the [hardware requirements specified in Part
+1](#hardware) with [Go installed](#install-go). We are assuming you
+already have a daemon home (\$HOME/.fury) setup.
+
+These instructions are for creating a basic setup on a single node.
+Validators should modify these instructions for their own custom setups
+as needed (i.e. sentry nodes, tmkms, etc).
+
+These examples are written targeting an Ubuntu 20.04 system. Relevant
+changes to commands should be made depending on the OS/architecture you
+are running on.
+
+### Update fury to v1.0.0
+
+For the gentx creation, we used the `gentx-launch` branch of the
+[Fury codebase](https://github.com/four4two/fury).
+
+For launch, please update to the `v1.0.1` tag and rebuild your binaries.
+(The `v1.0.0` tag is also fine, `v1.0.1` just fixes a bug in displaying
+the version. The state machine for the two versions are identical)
+
+``` {.sh}
+git clone https://github.com/four4two/fury
+cd fury
+git checkout v1.0.1
+
+make install
+```
+
+### Verify Your Installation
+
+Verify that everything is OK. If you get something *like* the following,
+you've successfully installed Fury on your system. (scroll up to see
+above the list of dependencies)
+
+``` {.sh}
+fury version --long
+
+name: fury
+server_name: fury
+version: '"1.0.1"'
+commit: a20dab6d638da0883f9fbb9f5bd222affb8700ad
+build_tags: netgo,ledger
+go: go version go1.16.3 darwin/amd64
+```
+
+If the software version does not match, then please check your `$PATH`
+to ensure the correct `fury` is running.
+
+### Save your Chain ID in fury config
+
+Fury reintroduces the client-side config that was removed in earlier
+Stargate versions of the Cosmo SDK.
+
+If you haven't done so already, please save the mainnet chain-id to your
+client.toml. This will make it so you do not have to manually pass in
+the chain-id flag for every CLI command.
+
+``` {.sh}
+fury config chain-id highbury_710-1
+```
+
+### Install and setup Cmervisor
+
+We highly recommend validators use cmervisor to run their nodes. This
+will make low-downtime upgrades more smoother, as validators don't have
+to manually upgrade binaries during the upgrade, and instead can
+preinstall new binaries, and cmervisor will automatically update them
+based on on-chain SoftwareUpgrade proposals.
+
+You should review the docs for cmervisor located here:
+<https://docs.cosmos.network/master/run-node/cmervisor.html>
+
+If you choose to use cmervisor, please continue with these
+instructions:
+
+Cmervisor is currently located in the Cosmo SDK repo, so you will need
+to download that, build cmervisor, and add it to you PATH.
+
+``` {.sh}
+git clone https://github.com/cosmos/cosmos-sdk
+cd cosmos-sdk
+git checkout v0.42.5
+make cmervisor
+cp cmervisor/cmervisor $GOPATH/bin/cmervisor
+cd $HOME
+```
+
+After this, you must make the necessary folders for cosmosvisor in your
+daemon home directory (\~/.fury).
+
+``` {.sh}
+mkdir -p ~/.fury
+mkdir -p ~/.fury/cmervisor
+mkdir -p ~/.fury/cmervisor/genesis
+mkdir -p ~/.fury/cmervisor/genesis/bin
+mkdir -p ~/.fury/cmervisor/upgrades
+```
+
+Cmervisor requires some ENVIRONMENT VARIABLES be set in order to
+function properly. We recommend setting these in your `.profile` so it
+is automatically set in every session.
+
+    echo "# Setup Cmervisor" >> ~/.profile
+    echo "export DAEMON_NAME=fury" >> ~/.profile
+    echo "export DAEMON_HOME=$HOME/.fury" >> ~/.profile
+    echo 'export PATH="$DAEMON_HOME/cmervisor/current/bin:$PATH"' >> ~/.profile
+    source ~/.profile
+
+Finally, you should move the fury binary into the cmervisor/genesis
+folder.
+
+    mv $GOPATH/bin/fury ~/.fury/cmervisor/genesis/bin
+
+### Download Genesis File
+
+You can now download the "genesis" file for the chain. It is pre-filled
+with the entire genesis state and gentxs.
+
+``` {.sh}
+curl https://media.githubusercontent.com/media/osmosis-labs/networks/main/highbury_710-1/genesis.json > ~/.fury/config/genesis.json
+```
+
+### Updates to config files
+
+You should review the config.toml and app.toml that was generated when
+you ran `fury init` last time.
+
+A couple things to highlight especially:
+
+- In the `launch-gentxs` branch, we defaulted the tendermint fast-sync
+    to be "v2". However, thanks to testing with partners from
+    [Skynet](http://skynet.paullovette.com/) and [Akash
+    Network](https://akash.network/), we've determined that "v2" is too
+    unstable for use in production, and so we recommend everyone
+    downgrade to "v0". In your config.toml, in the \[fastsync\] section,
+    change `version = "v2"` to `version = "v0"`.
+- We've defaulted nodes to having their gRPC and REST endpoints
+    enabled. If you do not want his (especially for validator nodes),
+    please turn these off in your app.toml
+- We have defaulted all nodes to maintaining 2 recent statesync
+    snapshots.
+- When it comes the min gas fees, our recommendation is to leave this
+    blank for now (charge no gas fees), to make the UX as seamless as
+    possible for users to be able to pay with whichever IBC asset they
+    bridge over. Then you can return to this in \~1 week and include
+    min-gas-price costs denominated in multiple different IBCed assets.
+    We're aware this is quite clunkly right now, and we will be working
+    on better mechanisms for this process. Here's to interchain UX
+    finally becoming a reality!
+
+### Reset Chain Database
+
+There shouldn't be any chain database yet, but in case there is for some
+reason, you should reset it.
+
+``` {.sh}
+fury unsafe-reset-all
+```
+
+### Start your node
+
+Now that everything is setup and ready to go, you can start your node.
+
+``` {.sh}
+cmervisor start
+```
+
+You will need some way to keep the process always running. If you're on
+linux, you can do this by creating a service.
+
+``` {.sh}
+sudo tee /etc/systemd/system/fury.service > /dev/null <<EOF  
+[Unit]
+Description=Fury Daemon
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which cmervisor) start
+Restart=always
+RestartSec=3
+LimitNOFILE=infinity
+
+Environment="DAEMON_HOME=$HOME/.fury"
+Environment="DAEMON_NAME=fury"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+Then update and start the node
+
+``` {.sh}
+sudo -S systemctl daemon-reload
+sudo -S systemctl enable fury
+sudo -S systemctl start fury
+```
+
+You can check the status with:
+
+``` {.sh}
+systemctl status fury
+```
+
+## Conclusion
+
+See you all at launch! Join the discord!
+
+---
+*Disclaimer: This content is provided for informational purposes only,
+and should not be relied upon as legal, business, investment, or tax
+advice. You should consult your own advisors as to those matters.
+References to any securities or digital assets are for illustrative
+purposes only and do not constitute an investment recommendation or
+offer to provide investment advisory services. Furthermore, this content
+is not directed at nor intended for use by any investors or prospective
+investors, and may not under any circumstances be relied upon when
+making investment decisions.*
+
+This work, ["Fury Genesis Validators
+Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md),
+is a derivative of ["Agoric Validator
+Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used
+under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric
+validator gudie is itself is a derivative of ["Validating Kava
+Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579)
+by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC
+BY](http://creativecommons.org/licenses/by/4.0/). "Fury Validator
+Guide" is licensed under [CC
+BY](http://creativecommons.org/licenses/by/4.0/) by [Fury
+Labs](https://fury.zone/). It was extensively modified to be relevant
+to the Fury Chain.
