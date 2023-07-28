@@ -81,7 +81,7 @@ For resources that references `gaiacli`, you can replace `gaiacli` with `fucli`
 
 ## Conclusion
 
-See you all at launch! ["Join the discord!"](https://discord.com/invite/kQzh3Uv)
+See you all at launch! [Join the discord!](https://discord.com/invite/kQzh3Uv)
 
 ---
 *Disclaimer: This content is provided for informational purposes only,
