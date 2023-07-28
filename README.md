@@ -1,3 +1,5 @@
+# [https://github.com/four4two/mainnet-gentx/assets/banner.png]
+
 # Setting Up a Genesis Fury Validator
 
 This guide will provide instructions on setting up a node, submitting a gentx, and other
