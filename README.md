@@ -13,10 +13,9 @@ This document includes instructions for validators who intend to participate in 
 
 ## Instructions for Fan Club-Owner Validator Participants
 
-You will be preparing two documents:
+You will be preparing a document:
 
-1. `gentx.json` a signed transaction with your validator key that will create a validator at genesis with 20000 self-delegated Fury.
-2. `account.json` a json file containing the address and amount of FURY tokens you will receive at this address. The tokens at this address will be subject to vesting terms based on the contract you signed.
+`gentx.json` a signed transaction with your validator key that will create a validator at genesis with 20000 self-delegated Fury.
 
 Once the documents are created, you will place them in a new directory in the `gentx` folder of this repo. Choose a unique directory name.
 
