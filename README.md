@@ -4,13 +4,13 @@ Fanfury
 
 # Setting Up a Genesis Fury Validator
 
-# Launching Kava
+# Launching Fury
 
-This document includes instructions for validators who intend to participate in the launch of the Kava mainnet. Please note:
+This document includes instructions for validators who intend to participate in the launch of the Fury mainnet. Please note:
 
-1. This process is intended for technically inclined people who have participated in Kava testnets and other `cosmos-sdk` based blockchain launches. Experience running production IT systems is strongly recommended.
-2. KAVA staked during genesis will be at risk of 5% slashing if your validator double signs. If you accidentally misconfigure your validator setup, this can easily happen, and slashed KAVA are not expected to be recoverable by any means. Additionally, if you double-sign, your validator will be tombstoned and you will be required to change operator and signing keys.
-3. You will be creating public key accounts that are restored via their mnemonic. It is vital that you securely backup and store your mnemonic for any accounts that are created during this process. **Failure to do so can result in the irrecoverable loss of all KAVA tokens**.
+1. This process is intended for technically inclined people who have participated in Fury testnets and other `cosmos-sdk` based blockchain launches. Experience running production IT systems is strongly recommended.
+2. Fury staked during genesis will be at risk of 5% slashing if your validator double signs. If you accidentally misconfigure your validator setup, this can easily happen, and slashed Fury are not expected to be recoverable by any means. Additionally, if you double-sign, your validator will be tombstoned and you will be required to change operator and signing keys.
+3. You will be creating public key accounts that are restored via their mnemonic. It is vital that you securely backup and store your mnemonic for any accounts that are created during this process. **Failure to do so can result in the irrecoverable loss of all Fury tokens**.
 
 
 ## Instructions
@@ -22,8 +22,8 @@ This document includes instructions for validators who intend to participate in 
 
 You will be preparing two documents:
 
-1. `gentx.json` a signed transaction with your validator key that will create a validator at genesis with 50 self-delegated KAVA.
-2. `account.json` a json file containing the address and amount of KAVA tokens you will receive at this address. The tokens at this address will be subject to vesting terms based on the contract you signed.
+1. `gentx.json` a signed transaction with your validator key that will create a validator at genesis with 50 self-delegated Fury.
+2. `account.json` a json file containing the address and amount of Fury tokens you will receive at this address. The tokens at this address will be subject to vesting terms based on the contract you signed.
 
 Once the documents are created, you will place them in a new directory in the `gentx` folder of this repo. Choose a unique directory name.
 
@@ -49,7 +49,7 @@ fud init <your-validator-moniker> --chain-id fury-1
 fucli keys add <your-validator-key-name>
 ```
 
-3. Assign 50 KAVA to your validator
+3. Assign 50 Fury to your validator
 
 ```sh
 fud add-genesis-account $(fucli keys show <your-validator-key-name> -a) 50000000ufury
@@ -89,10 +89,10 @@ printf '{"account": "", "amount": ""}\n' > ./gentx/<your-directory>/account.json
 
 8. Fill in the address and amount of ufury you expect to receive in the vesting account
 
-Example: If you expect to receive 100,000 KAVA
+Example: If you expect to receive 100,000 Fury
 
-  * Subtract 50 KAVA, which was allocated to your validator
-  * multiply by 10^6 to convert KAVA to ufury
+  * Subtract 50 Fury, which was allocated to your validator
+  * multiply by 10^6 to convert Fury to ufury
   * (100000 - 50) * 10^6 = 99950000000 ufury
 
 ```json
@@ -108,7 +108,7 @@ Example: If you expect to receive 100,000 KAVA
 
 Eligible participants in the founder rewards program will submit an account that will be included in genesis:
 
-1. `account.json` a json file containing the address and amount of KAVA tokens you will receive at this address. The tokens will be immediately available and not bonded to a particular validator. Founder badge participants are free to create a validator immediately after launch.
+1. `account.json` a json file containing the address and amount of Fury tokens you will receive at this address. The tokens will be immediately available and not bonded to a particular validator. Founder badge participants are free to create a validator immediately after launch.
 
 Once the `account.json` file is created, you will place it in a new directory in the `gentx` folder of this repo. Choose a unique directory name.
 
@@ -140,11 +140,11 @@ fucli keys add <your-account-key-name>
 printf '{"account": "", "amount": ""}\n' > ./gentx/<your-directory>/account.json
 ```
 
-4. Fill in the address and amount of ufury you expect to receive in the account. Refer to the founder [documentation](https://github.com/Kava-Labs/fury/blob/master/docs/REWARDS.md) for reward amounts and eligibility.
+4. Fill in the address and amount of ufury you expect to receive in the account. Refer to the founder [documentation](https://github.com/Fury-Labs/fury/blob/master/docs/REWARDS.md) for reward amounts and eligibility.
 
-Example: If you expect to receive 3000 KAVA
+Example: If you expect to receive 3000 Fury
 
-  * multiply by 10^6 to convert KAVA to ufury
+  * multiply by 10^6 to convert Fury to ufury
   * 3000 * 10^6 = 3000000000 ufury
 
 ```json
@@ -160,7 +160,7 @@ Example: If you expect to receive 3000 KAVA
 
 For resources that references `gaiacli`, you can replace `gaiacli` with `fucli`
 
-* [Using the Cosmos app and a Ledger device to store your Kava keys](https://cosmos.network/docs/cosmos-hub/delegator-guide-cli.html#cosmos-accounts)
+* [Using the Cosmos app and a Ledger device to store your Fury keys](https://cosmos.network/docs/cosmos-hub/delegator-guide-cli.html#cosmos-accounts)
 * [Validator Security](https://cosmos.network/docs/cosmos-hub/validators/security.html#validator-security)
 * [Creating a validator after mainnet launch](https://cosmos.network/docs/cosmos-hub/validators/validator-setup.html#create-your-validator)
 
@@ -185,7 +185,7 @@ Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md),
 is a derivative of ["Agoric Validator
 Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used
 under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric
-validator gudie is itself is a derivative of ["Validating Kava
+validator gudie is itself is a derivative of ["Validating Fury
 Mainnet"](https://medium.com/four4two/validating-fury-mainnet-72fa1b6ea579)
 by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC
 BY](http://creativecommons.org/licenses/by/4.0/). "Fury Validator
