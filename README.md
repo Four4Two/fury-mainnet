@@ -22,10 +22,10 @@ Some important notes on joining as a genesis validator:
     these future upgrades may require validators to run additional
     software beyond the normal node software, and validators should be
     prepared to learn and run these.
-4. To be a genesis validator, you must have MER at genesis via the
+4. To be a genesis validator, you must have FURY at genesis via the
     fairdrop. Every address that had ATOMs during the Stargate upgrade
     of the Cosmo Hub from `cosmoshub-3` to `cosmoshub-4` will have
-    recieve fairdrop MER. You can verify that a Cosmo address has
+    recieve fairdrop FURY. You can verify that a Cosmo address has
     received coins in the fairdrop by inputting an address here:
     <https://airdrop.fury.zone/>.
 
