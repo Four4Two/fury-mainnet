@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-07-29T15:53:49.187326Z",
+  "genesis_time": "2023-07-29T19:46:19.847171Z",
   "chain_id": "highbury_710-1",
   "initial_height": "1",
   "consensus_params": {
@@ -46,7 +46,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "account_number": "13",
+            "account_number": "6",
             "address": "fury1p3rac6h36rxrxy82vr3c09qeg0uecwcy0q325x",
             "pub_key": null,
             "sequence": "1"
@@ -56,7 +56,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "10",
+            "account_number": "13",
             "address": "fury1zlefkpe3g0vvm9a4h0jf9000lmqutlh9tu4cr5",
             "pub_key": null,
             "sequence": "0"
@@ -80,7 +80,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "6",
+            "account_number": "9",
             "address": "fury1fl48vsnmsdzcv85q5d2q4z5ajdha8yu39sqq2c",
             "pub_key": null,
             "sequence": "0"
@@ -94,7 +94,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "7",
+            "account_number": "10",
             "address": "fury1tygms3xhhs3yv487phx3dw4a95jn7t7l3su3uv",
             "pub_key": null,
             "sequence": "0"
@@ -108,7 +108,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "8",
+            "account_number": "11",
             "address": "fury10d07y265gmmuvt4z0w9aw880jnsr700j2f629u",
             "pub_key": null,
             "sequence": "0"
@@ -134,7 +134,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "5",
+            "account_number": "8",
             "address": "fury1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8h5dn6s",
             "pub_key": null,
             "sequence": "0"
@@ -148,7 +148,7 @@
             "account_number": "2",
             "address": "fury1nvnhwcuqjjpl5e0hzaau3va0rjac4mjxvthnxs",
             "pub_key": null,
-            "sequence": "3"
+            "sequence": "0"
           },
           "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
         },
@@ -165,7 +165,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "account_number": "12",
+            "account_number": "5",
             "address": "fury1er685zfnpskrsah33h49r4smtdtgf9t8d0jvmp",
             "pub_key": null,
             "sequence": "1"
@@ -175,7 +175,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "account_number": "11",
+            "account_number": "4",
             "address": "fury1mpjyal3hvxx0puqrekv9guccxhlzpwz0k78enf",
             "pub_key": null,
             "sequence": "1"
@@ -185,7 +185,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "9",
+            "account_number": "12",
             "address": "fury1m3h30wlvsf8llruxtpukdvsy0km2kum8c6wh50",
             "pub_key": null,
             "sequence": "0"
@@ -198,7 +198,7 @@
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": {
-            "account_number": "4",
+            "account_number": "7",
             "address": "fury17xpfvakm2amg962yls6f84z3kell8c5lqj20cj",
             "pub_key": null,
             "sequence": "0"
@@ -207,71 +207,380 @@
           "permissions": []
         },
         {
+          "@type": "/cosmos.vesting.v1beta1.PeriodicVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1juwlafjvf4humn9p302auw9rw442hlsgla8m2p",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "53000000000000"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [],
+            "end_time": "1762799340"
+          },
+          "start_time": "1689575404",
+          "vesting_periods": [
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            },
+            {
+              "length": "9152992",
+              "amount": [
+                {
+                  "denom": "ufury",
+                  "amount": "6625000000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury19zydqx84dlwzxnjqc9fsd5gydgj0xs58m4shk0",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "4487671232877"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [],
+            "end_time": "1699640700"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1k29krn5w4t88khjqx8jvw890v94ys94aux7zx8",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "8077808219178"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [],
+            "end_time": "1699640700"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1fanavnmtvdr4hwd2ukykk7n4jlz4mn7mhyq6mj",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "1077041095890"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [],
+            "end_time": "1699640700"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1898l7ler3fhkt3sz5pw63zcxlzdlwk80ytt8yx",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "1346301369863"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [],
+            "end_time": "1699640700"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1vgtrnsvygv7ycmxvmg977sj9qt0xc27dx3jtf7",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "9800000000000"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "9800000000000"
+              }
+            ],
+            "end_time": "1691691900"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1mtsmqlsr4lvxpgdvt6hwx6lsj840jqv6kjr54m",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "63000000000000"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "63000000000000"
+              }
+            ],
+            "end_time": "1712773500"
+          },
+          "start_time": "1689575400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury1lfpwz778tg7xqrv6ztzcmtkynyy7frf7f6l7r0",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "8975342465753"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "8975342465753"
+              }
+            ],
+            "end_time": "1762799340"
+          },
+          "start_time": "1712687400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury13w8sqj8sh4pf97qfmlewv3ksy8pyjg09wtlvkx",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "16308709530324"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "16308709530324"
+              }
+            ],
+            "end_time": "1762799340"
+          },
+          "start_time": "1712687400"
+        },
+        {
+          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
+          "base_vesting_account": {
+            "base_account": {
+              "address": "fury125wy08780sv8glkettxrrutje8q7uc495manll",
+              "pub_key": null,
+              "account_number": "0",
+              "sequence": "0"
+            },
+            "original_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "16308709530324"
+              }
+            ],
+            "delegated_free": [],
+            "delegated_vesting": [
+              {
+                "denom": "ufury",
+                "amount": "16308709530324"
+              }
+            ],
+            "end_time": "1762799340"
+          },
+          "start_time": "1712687400"
+        },
+        {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1386sxfvrg0cfc8amwyltx9mgyjgruy0u2fm6up",
+          "address": "fury1exsdefuvzea8dppn8fja20xvf326ewch5hvdcw",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury17hpz5keuv6wgecx7vfwyaexse6n6ml60cru9qg",
+          "address": "fury1jgfcepkzagkvf2v5c5kpg25hmqenpshckcq3c3",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury13m2r2pj5uw2d648ze7qzaws8qt3lznpq86ymes",
+          "address": "fury1crjkuz7xene8kh8p8e7c25s4v3hleldkvfy7nz",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1fedzahsdqgpugktarpdathxas9ugv84ug3kp4z",
+          "address": "fury1krk2javzrr3rjl7sep09tn239xcjyumjcttfyw",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uwq23sk",
+          "address": "fury1feejl9250pxjaugjh2peneh8arrrm5ge65zn0h",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1v2autl0en5q3988g7mp8gkuewulhq39sn7f402",
+          "address": "fury19qqqk3sj0acrghemtugf4v5h98qnmhgdln8e00",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1dpwtjz2hfm9t9rxtassex3hpsx7nm66y9sehuw",
+          "address": "fury165r0gq3a0anmvrep3dvvu8ze8s7jshts8fas6d",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1lk3w0uuprp3vf5hq9t5cau07lkcmx2qcfxm7mk",
+          "address": "fury1uku0syqlvkse92fp9hynj5y9e0ex0txmxf56yx",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1eprkzl4h27za3tc59f54090ygqvf5krlyddpyp",
+          "address": "fury1ha93wfeq5tk6646cgeqztha2qd9sggl8sfq0x0",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "fury1ktn9xg9p5kwatcpy0mnkgjw3we5w5g9jnzz30s",
+          "address": "fury1805egea43t4xwhgetx6qv79pqj8qtd20mlsywk",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -5811,6 +6120,68 @@
       },
       "balances": [
         {
+          "address": "fury1r7qzxtmanllwty95nghzqdvuwnc0py48p25cy6",
+          "coins": [
+            {
+              "amount": "100000000000",
+              "denom": "bnb"
+            },
+            {
+              "amount": "1000000000",
+              "denom": "ufury"
+            }
+          ]
+        },
+        {
+          "address": "fury1fl48vsnmsdzcv85q5d2q4z5ajdha8yu39sqq2c",
+          "coins": [
+            {
+              "amount": "1000000000",
+              "denom": "ufury"
+            }
+          ]
+        },
+        {
+          "address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
+          "coins": [
+            {
+              "amount": "100000000000",
+              "denom": "bnb"
+            },
+            {
+              "amount": "1000000000",
+              "denom": "ufury"
+            }
+          ]
+        },
+        {
+          "address": "fury1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8h5dn6s",
+          "coins": [
+            {
+              "amount": "5000000000000",
+              "denom": "ufury"
+            }
+          ]
+        },
+        {
+          "address": "fury1nvnhwcuqjjpl5e0hzaau3va0rjac4mjxvthnxs",
+          "coins": [
+            {
+              "amount": "100000000000000000000",
+              "denom": "afury"
+            }
+          ]
+        },
+        {
+          "address": "fury1cyk9hwcnj8hngqels89z375370xeug07xd5qqt",
+          "coins": [
+            {
+              "amount": "100000000000000000000",
+              "denom": "afury"
+            }
+          ]
+        },
+        {
           "address": "fury1qq9vwc6gcskt64mg378cnxv9xu6xr34rkj62w5",
           "coins": [
             {
@@ -6864,19 +7235,6 @@
           ]
         },
         {
-          "address": "fury1r7qzxtmanllwty95nghzqdvuwnc0py48p25cy6",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000"
-            }
-          ]
-        },
-        {
           "address": "fury1r796wq2hn0k7yf8kcqrmlxqmf3ys4pdyd66let",
           "coins": [
             {
@@ -7107,6 +7465,19 @@
             {
               "denom": "ufury",
               "amount": "2773972603"
+            }
+          ]
+        },
+        {
+          "address": "fury19qqqk3sj0acrghemtugf4v5h98qnmhgdln8e00",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
             }
           ]
         },
@@ -7669,6 +8040,19 @@
           ]
         },
         {
+          "address": "fury1805egea43t4xwhgetx6qv79pqj8qtd20mlsywk",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
           "address": "fury18s8lsl2xde99r9purel3ccj09tut436xvx0a60",
           "coins": [
             {
@@ -8146,7 +8530,16 @@
           ]
         },
         {
-          "address": "fury1fedzahsdqgpugktarpdathxas9ugv84ug3kp4z",
+          "address": "fury1fen6hz7x8wgjq0jxpy3swj7r6d36sphrxzujsf",
+          "coins": [
+            {
+              "denom": "ufury",
+              "amount": "1664383562"
+            }
+          ]
+        },
+        {
+          "address": "fury1feejl9250pxjaugjh2peneh8arrrm5ge65zn0h",
           "coins": [
             {
               "denom": "bnb",
@@ -8155,15 +8548,6 @@
             {
               "denom": "ufury",
               "amount": "1000000000000"
-            }
-          ]
-        },
-        {
-          "address": "fury1fen6hz7x8wgjq0jxpy3swj7r6d36sphrxzujsf",
-          "coins": [
-            {
-              "denom": "ufury",
-              "amount": "1664383562"
             }
           ]
         },
@@ -8735,19 +9119,6 @@
           ]
         },
         {
-          "address": "fury1v2autl0en5q3988g7mp8gkuewulhq39sn7f402",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury1vtgjc3g626nh7xm205jwvxg3sha6z78auuq7kw",
           "coins": [
             {
@@ -8879,32 +9250,6 @@
             {
               "denom": "ufury",
               "amount": "235713750000"
-            }
-          ]
-        },
-        {
-          "address": "fury1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uwq23sk",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
-          "address": "fury1dpwtjz2hfm9t9rxtassex3hpsx7nm66y9sehuw",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
             }
           ]
         },
@@ -9890,19 +10235,6 @@
           ]
         },
         {
-          "address": "fury1386sxfvrg0cfc8amwyltx9mgyjgruy0u2fm6up",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury13fa9gg76jwyc4lfkgz3k4lalrjx4xn6nrp6t5m",
           "coins": [
             {
@@ -10038,19 +10370,6 @@
           ]
         },
         {
-          "address": "fury13m2r2pj5uw2d648ze7qzaws8qt3lznpq86ymes",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury13ucdlvclmhd8eh823u890cv3ysjg38nl8qfedw",
           "coins": [
             {
@@ -10119,6 +10438,19 @@
             {
               "denom": "ufury",
               "amount": "5492928660"
+            }
+          ]
+        },
+        {
+          "address": "fury1jgfcepkzagkvf2v5c5kpg25hmqenpshckcq3c3",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
             }
           ]
         },
@@ -10978,6 +11310,19 @@
           ]
         },
         {
+          "address": "fury1krk2javzrr3rjl7sep09tn239xcjyumjcttfyw",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
           "address": "fury1k9pn6unxu6ak349psle9d2lcj02rcy5fa47gtz",
           "coins": [
             {
@@ -11019,19 +11364,6 @@
             {
               "denom": "ufury",
               "amount": "1719356449"
-            }
-          ]
-        },
-        {
-          "address": "fury1ktn9xg9p5kwatcpy0mnkgjw3we5w5g9jnzz30s",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
             }
           ]
         },
@@ -11342,6 +11674,19 @@
           ]
         },
         {
+          "address": "fury1ha93wfeq5tk6646cgeqztha2qd9sggl8sfq0x0",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
           "address": "fury1ha8nzntx80c40pel385nqa2wjeh3yp9x9svy78",
           "coins": [
             {
@@ -11410,6 +11755,19 @@
             {
               "denom": "ufury",
               "amount": "2052739726"
+            }
+          ]
+        },
+        {
+          "address": "fury1crjkuz7xene8kh8p8e7c25s4v3hleldkvfy7nz",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
             }
           ]
         },
@@ -11567,19 +11925,6 @@
           ]
         },
         {
-          "address": "fury1eprkzl4h27za3tc59f54090ygqvf5krlyddpyp",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury1erlvaea2urcsvfw33kzfv5e6dpm9gsagjx59ef",
           "coins": [
             {
@@ -11594,6 +11939,19 @@
             {
               "denom": "ufury",
               "amount": "2219178082"
+            }
+          ]
+        },
+        {
+          "address": "fury1exsdefuvzea8dppn8fja20xvf326ewch5hvdcw",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
             }
           ]
         },
@@ -11927,6 +12285,19 @@
             {
               "denom": "ufury",
               "amount": "5547945206"
+            }
+          ]
+        },
+        {
+          "address": "fury165r0gq3a0anmvrep3dvvu8ze8s7jshts8fas6d",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
             }
           ]
         },
@@ -12309,6 +12680,19 @@
           ]
         },
         {
+          "address": "fury1uku0syqlvkse92fp9hynj5y9e0ex0txmxf56yx",
+          "coins": [
+            {
+              "denom": "bnb",
+              "amount": "100000000"
+            },
+            {
+              "denom": "ufury",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
           "address": "fury1ues856elgspt5qhrzeks8jryd3a7jjyxscx0vw",
           "coins": [
             {
@@ -12678,19 +13062,6 @@
           ]
         },
         {
-          "address": "fury17hpz5keuv6wgecx7vfwyaexse6n6ml60cru9qg",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury17hw7yx7vkhmueftc7anqz84p8k4ly3fx8actyp",
           "coins": [
             {
@@ -12952,19 +13323,6 @@
           ]
         },
         {
-          "address": "fury1lk3w0uuprp3vf5hq9t5cau07lkcmx2qcfxm7mk",
-          "coins": [
-            {
-              "denom": "bnb",
-              "amount": "100000000"
-            },
-            {
-              "denom": "ufury",
-              "amount": "1000000000000"
-            }
-          ]
-        },
-        {
           "address": "fury1l62yvvjhnlh9gjluutf8zmcaxnn6qmpj7xefce",
           "coins": [
             {
@@ -13053,55 +13411,6 @@
               "amount": "2219178082"
             }
           ]
-        },
-        {
-          "address": "fury1fl48vsnmsdzcv85q5d2q4z5ajdha8yu39sqq2c",
-          "coins": [
-            {
-              "amount": "1000000000",
-              "denom": "ufury"
-            }
-          ]
-        },
-        {
-          "address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
-          "coins": [
-            {
-              "amount": "100000000000",
-              "denom": "bnb"
-            },
-            {
-              "amount": "1000000000",
-              "denom": "ufury"
-            }
-          ]
-        },
-        {
-          "address": "fury1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8h5dn6s",
-          "coins": [
-            {
-              "amount": "656855008338081",
-              "denom": "afury"
-            }
-          ]
-        },
-        {
-          "address": "fury1nvnhwcuqjjpl5e0hzaau3va0rjac4mjxvthnxs",
-          "coins": [
-            {
-              "amount": "99999404936850131929",
-              "denom": "afury"
-            }
-          ]
-        },
-        {
-          "address": "fury1cyk9hwcnj8hngqels89z375370xeug07xd5qqt",
-          "coins": [
-            {
-              "amount": "100000000000000000000",
-              "denom": "afury"
-            }
-          ]
         }
       ],
       "supply": [],
@@ -13109,11 +13418,110 @@
     },
     "bep3": {
       "params": {
-        "asset_params": []
+        "asset_params": [
+          {
+            "denom": "btcb",
+            "coin_id": "0",
+            "supply_limit": {
+              "limit": "100000000000",
+              "time_limited": false,
+              "time_period": "0",
+              "time_based_limit": "0"
+            },
+            "active": true,
+            "deputy_address": "fury1p6m60rhx9y3nrc9wm674pgqyjs7acf3s4neef5",
+            "fixed_fee": "2",
+            "min_swap_amount": "3",
+            "max_swap_amount": "2000000000",
+            "min_block_lock": "24686",
+            "max_block_lock": "86400"
+          },
+          {
+            "denom": "xrpb",
+            "coin_id": "144",
+            "supply_limit": {
+              "limit": "2000000000000000",
+              "time_limited": false,
+              "time_period": "0",
+              "time_based_limit": "0"
+            },
+            "active": true,
+            "deputy_address": "fury1zkrprer60nu6rmfhu9ea7aqs45055vx449xvss",
+            "fixed_fee": "100000",
+            "min_swap_amount": "100001",
+            "max_swap_amount": "250000000000000",
+            "min_block_lock": "24686",
+            "max_block_lock": "86400"
+          },
+          {
+            "denom": "bnb",
+            "coin_id": "714",
+            "supply_limit": {
+              "limit": "100000000000000",
+              "time_limited": false,
+              "time_period": "0",
+              "time_based_limit": "0"
+            },
+            "active": true,
+            "deputy_address": "fury1v23p26fz7mrep3lrqa592mgskz4n5yfxgg04yk",
+            "fixed_fee": "1000",
+            "min_swap_amount": "1001",
+            "max_swap_amount": "500000000000",
+            "min_block_lock": "24686",
+            "max_block_lock": "86400"
+          },
+          {
+            "denom": "busd",
+            "coin_id": "727",
+            "supply_limit": {
+              "limit": "2000000000000000",
+              "time_limited": false,
+              "time_period": "0",
+              "time_based_limit": "0"
+            },
+            "active": true,
+            "deputy_address": "fury1hllxxe0tzqggpjvl9tdj45kc7n0r6my23xuex4",
+            "fixed_fee": "20000",
+            "min_swap_amount": "20001",
+            "max_swap_amount": "100000000000000",
+            "min_block_lock": "24686",
+            "max_block_lock": "86400"
+          }
+        ]
       },
       "atomic_swaps": [],
       "supplies": [],
       "previous_block_time": "1970-01-01T00:00:01Z"
+    },
+    "bridge": {
+      "erc20_bridge_pairs": [],
+      "next_withdraw_sequence": "1",
+      "params": {
+        "bridge_enabled": true,
+        "enabled_conversion_pairs": [
+          {
+            "denom": "erc20/weth",
+            "fury_erc20_address": "0xce6d41e1c21e73c53f391a942d49e1a6860c3325"
+          }
+        ],
+        "enabled_erc20_tokens": [
+          {
+            "address": "0xc8f47a09330c2c3876f18dea51d61b5b56849567",
+            "decimals": 18,
+            "minimum_withdraw_amount": "10000000000000000",
+            "name": "Wrapped ETH",
+            "symbol": "WETH"
+          },
+          {
+            "address": "0x9b277763809483fa65f7177bc8b3af1cbb8aee46",
+            "decimals": 6,
+            "minimum_withdraw_amount": "10000000",
+            "name": "USDC",
+            "symbol": "USDC"
+          }
+        ],
+        "relayer": "fury1cyk9hwcnj8hngqels89z375370xeug07xd5qqt"
+      }
     },
     "capability": {
       "index": "1",
@@ -13121,7 +13529,229 @@
     },
     "cdp": {
       "params": {
-        "collateral_params": [],
+        "collateral_params": [
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "8",
+            "debt_limit": {
+              "amount": "20000000000000",
+              "denom": "usdf"
+            },
+            "denom": "bnb",
+            "liquidation_market_id": "bnb:usd:30",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "bnb:usd",
+            "stability_fee": "1.000000000782997700",
+            "type": "bnb-a"
+          },
+          {
+            "auction_size": "100000000",
+            "conversion_factor": "8",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "btcb",
+            "liquidation_market_id": "btc:usd:30",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "btc:usd",
+            "stability_fee": "1.000000000782997700",
+            "type": "btcb-a"
+          },
+          {
+            "denom": "xrpb",
+            "type": "xrpb-a",
+            "liquidation_ratio": "1.500000000000000000",
+            "debt_limit": {
+              "denom": "usdf",
+              "amount": "1000000000000"
+            },
+            "stability_fee": "1.000000001547125958",
+            "auction_size": "100000000000",
+            "liquidation_penalty": "0.075000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "xrp:usd",
+            "liquidation_market_id": "xrp:usd:30",
+            "conversion_factor": "8"
+          },
+          {
+            "denom": "busd",
+            "type": "busd-a",
+            "liquidation_ratio": "1.010000000000000000",
+            "debt_limit": {
+              "denom": "usdf",
+              "amount": "3000000000000"
+            },
+            "stability_fee": "1.000000000000000000",
+            "auction_size": "1000000000000",
+            "liquidation_penalty": "0.075000000000000000",
+            "check_collateralization_index_count": "10",
+            "keeper_reward_percentage": "0.01",
+            "spot_market_id": "busd:usd",
+            "liquidation_market_id": "busd:usd:30",
+            "conversion_factor": "8"
+          },
+          {
+            "denom": "busd",
+            "type": "busd-b",
+            "liquidation_ratio": "1.100000000000000000",
+            "debt_limit": {
+              "denom": "usdf",
+              "amount": "3000000000000"
+            },
+            "stability_fee": "1.000000012857214317",
+            "auction_size": "1000000000000",
+            "liquidation_penalty": "0.075000000000000000",
+            "check_collateralization_index_count": "10",
+            "keeper_reward_percentage": "0.01",
+            "spot_market_id": "busd:usd",
+            "liquidation_market_id": "busd:usd:30",
+            "conversion_factor": "8"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "ufury",
+            "liquidation_market_id": "fury:usd:30",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "fury:usd",
+            "stability_fee": "1.000000000782997700",
+            "type": "ufury-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "ibc/C72DE26FFF16DE62BE2784E12229BDF5F4465CE8B10530426D6DB53255FF01B2",
+            "liquidation_market_id": "luna:usd:30",
+            "spot_market_id": "luna:usd",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "stability_fee": "1.000000000782997700",
+            "type": "luna-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "ibc/4129EB76C01ED14052054BB975DE0C6C5010E12FFD9253C20C58BCD828BEE9A5",
+            "liquidation_market_id": "akt:usd:30",
+            "spot_market_id": "akt:usd",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "stability_fee": "1.000000000782997700",
+            "type": "akt-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "liquidation_market_id": "osmo:usd:30",
+            "spot_market_id": "osmo:usd",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "stability_fee": "1.000000000782997700",
+            "type": "osmo-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+            "liquidation_market_id": "atom:usd:30",
+            "spot_market_id": "atom:usd",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "stability_fee": "1.000000000782997700",
+            "type": "atom-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "jinx",
+            "liquidation_market_id": "jinx:usd:30",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "jinx:usd",
+            "stability_fee": "1.000000000782997700",
+            "type": "jinx-a"
+          },
+          {
+            "auction_size": "50000000000",
+            "conversion_factor": "6",
+            "debt_limit": {
+              "amount": "2000000000000",
+              "denom": "usdf"
+            },
+            "denom": "jinxy",
+            "liquidation_market_id": "jinxy:usd:30",
+            "liquidation_penalty": "0.050000000000000000",
+            "liquidation_ratio": "1.500000000000000000",
+            "keeper_reward_percentage": "0.01",
+            "check_collateralization_index_count": "10",
+            "spot_market_id": "jinxy:usd",
+            "stability_fee": "1.000000000782997700",
+            "type": "jinxy-a"
+          },
+          {
+            "denom": "hbtc",
+            "type": "hbtc-a",
+            "liquidation_ratio": "1.500000000000000000",
+            "debt_limit": {
+              "denom": "usdf",
+              "amount": "10000000000000"
+            },
+            "stability_fee": "1.000000001547125958",
+            "auction_size": "1000000000000",
+            "liquidation_penalty": "0.075000000000000000",
+            "check_collateralization_index_count": "10",
+            "keeper_reward_percentage": "0.01",
+            "spot_market_id": "btc:usd",
+            "liquidation_market_id": "btc:usd:30",
+            "conversion_factor": "8"
+          }
+        ],
         "debt_param": {
           "denom": "usdf",
           "reference_asset": "usd",
@@ -13130,7 +13760,7 @@
         },
         "global_debt_limit": {
           "denom": "usdf",
-          "amount": "0"
+          "amount": "53000000000000"
         },
         "surplus_auction_threshold": "500000000000",
         "surplus_auction_lot": "10000000000",
@@ -13148,7 +13778,228 @@
     },
     "committee": {
       "next_proposal_id": "1",
-      "committees": [],
+      "committees": [
+        {
+          "@type": "/fury.committee.v1beta1.MemberCommittee",
+          "base_committee": {
+            "id": "1",
+            "description": "Fury Stability Committee",
+            "members": [
+              "fury135sy2edd00u963vcglpnsup4e5grx746g2xglc"
+            ],
+            "permissions": [
+              {
+                "@type": "/fury.committee.v1beta1.TextPermission"
+              },
+              {
+                "@type": "/fury.committee.v1beta1.CommunityPoolLendWithdrawPermission"
+              },
+              {
+                "@type": "/fury.committee.v1beta1.ParamsChangePermission",
+                "allowed_params_changes": [
+                  {
+                    "subspace": "auction",
+                    "key": "BidDuration"
+                  },
+                  {
+                    "subspace": "auction",
+                    "key": "IncrementSurplus"
+                  },
+                  {
+                    "subspace": "auction",
+                    "key": "IncrementDebt"
+                  },
+                  {
+                    "subspace": "auction",
+                    "key": "IncrementCollateral"
+                  },
+                  {
+                    "subspace": "bep3",
+                    "key": "AssetParams"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "GlobalDebtLimit"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "SurplusThreshold"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "SurplusLot"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "DebtThreshold"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "DebtLot"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "DistributionFrequency"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "CollateralParams"
+                  },
+                  {
+                    "subspace": "cdp",
+                    "key": "DebtParam"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "Active"
+                  },
+                  {
+                    "subspace": "furydist",
+                    "key": "Active"
+                  },
+                  {
+                    "subspace": "pricefeed",
+                    "key": "Markets"
+                  },
+                  {
+                    "subspace": "jinx",
+                    "key": "MoneyMarkets"
+                  },
+                  {
+                    "subspace": "jinx",
+                    "key": "MinimumBorrowUSDValue"
+                  }
+                ]
+              }
+            ],
+            "vote_threshold": "0.667000000000000000",
+            "proposal_duration": "604800s",
+            "tally_option": "TALLY_OPTION_FIRST_PAST_THE_POST"
+          }
+        },
+        {
+          "@type": "/fury.committee.v1beta1.MemberCommittee",
+          "base_committee": {
+            "id": "2",
+            "description": "Fury Safety Committee",
+            "members": [
+              "fury135sy2edd00u963vcglpnsup4e5grx746g2xglc"
+            ],
+            "permissions": [
+              {
+                "@type": "/fury.committee.v1beta1.SoftwareUpgradePermission"
+              }
+            ],
+            "vote_threshold": "0.667000000000000000",
+            "proposal_duration": "604800s",
+            "tally_option": "TALLY_OPTION_FIRST_PAST_THE_POST"
+          }
+        },
+        {
+          "@type": "/fury.committee.v1beta1.MemberCommittee",
+          "base_committee": {
+            "id": "3",
+            "description": "Fury God Committee (testing only)",
+            "members": [
+              "fury135sy2edd00u963vcglpnsup4e5grx746g2xglc"
+            ],
+            "permissions": [
+              {
+                "@type": "/fury.committee.v1beta1.GodPermission"
+              }
+            ],
+            "vote_threshold": "0.667000000000000000",
+            "proposal_duration": "604800s",
+            "tally_option": "TALLY_OPTION_FIRST_PAST_THE_POST"
+          }
+        },
+        {
+          "@type": "/fury.committee.v1beta1.TokenCommittee",
+          "base_committee": {
+            "id": "4",
+            "description": "JINX Governance Committee",
+            "members": [
+              "fury135sy2edd00u963vcglpnsup4e5grx746g2xglc"
+            ],
+            "permissions": [
+              {
+                "@type": "/fury.committee.v1beta1.TextPermission"
+              },
+              {
+                "@type": "/fury.committee.v1beta1.ParamsChangePermission",
+                "allowed_params_changes": [
+                  {
+                    "subspace": "jinx",
+                    "key": "MoneyMarkets"
+                  },
+                  {
+                    "subspace": "jinx",
+                    "key": "MinimumBorrowUSDValue"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "JinxSupplyRewardPeriods"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "JinxBorrowRewardPeriods"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "JinxDelegatorRewardPeriods"
+                  }
+                ]
+              }
+            ],
+            "vote_threshold": "0.667000000000000000",
+            "proposal_duration": "604800s",
+            "tally_option": "TALLY_OPTION_DEADLINE"
+          },
+          "quorum": "0.330000000000000000",
+          "tally_denom": "jinx"
+        },
+        {
+          "@type": "/fury.committee.v1beta1.TokenCommittee",
+          "base_committee": {
+            "id": "5",
+            "description": "JINXY Governance Committee",
+            "members": [
+              "fury135sy2edd00u963vcglpnsup4e5grx746g2xglc"
+            ],
+            "permissions": [
+              {
+                "@type": "/fury.committee.v1beta1.TextPermission"
+              },
+              {
+                "@type": "/fury.committee.v1beta1.ParamsChangePermission",
+                "allowed_params_changes": [
+                  {
+                    "subspace": "swap",
+                    "key": "AllowedPools"
+                  },
+                  {
+                    "subspace": "swap",
+                    "key": "SwapFee"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "DelegatorRewardPeriods"
+                  },
+                  {
+                    "subspace": "incentive",
+                    "key": "SwapRewardPeriods"
+                  }
+                ]
+              }
+            ],
+            "vote_threshold": "0.667000000000000000",
+            "proposal_duration": "604800s",
+            "tally_option": "TALLY_OPTION_DEADLINE"
+          },
+          "quorum": "0.330000000000000000",
+          "tally_denom": "jinxy"
+        }
+      ],
       "proposals": [],
       "votes": []
     },
@@ -13160,27 +14011,111 @@
       }
     },
     "distribution": {
+      "delegator_starting_infos": [
+        {
+          "delegator_address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
+          "starting_info": {
+            "height": "0",
+            "previous_period": "1",
+            "stake": "1000000000.000000000000000000"
+          },
+          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+        }
+      ],
+      "delegator_withdraw_infos": [],
+      "fee_pool": {
+        "community_pool": [
+          {
+            "amount": "26000000000000.840000000000000000",
+            "denom": "ufury"
+          }
+        ]
+      },
+      "outstanding_rewards": [
+        {
+          "outstanding_rewards": [
+            {
+              "amount": "5000000000000.160000000000000000",
+              "denom": "ufury"
+            }
+          ],
+          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+        }
+      ],
       "params": {
-        "community_tax": "0.020000000000000000",
         "base_proposer_reward": "0.010000000000000000",
         "bonus_proposer_reward": "0.040000000000000000",
+        "community_tax": "0.020000000000000000",
         "withdraw_addr_enabled": true
       },
-      "fee_pool": {
-        "community_pool": []
-      },
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
+      "previous_proposer": "furyvalcons1k59dqd8kd5pe9uueweay3qkjrdskq0myxrkhp2",
+      "validator_accumulated_commissions": [
+        {
+          "accumulated": {
+            "commission": [
+              {
+                "amount": "5000000000000.916000000000000000",
+                "denom": "ufury"
+              }
+            ]
+          },
+          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+        }
+      ],
+      "validator_current_rewards": [
+        {
+          "rewards": {
+            "period": "2",
+            "rewards": [
+              {
+                "amount": "10000000000.244000000000000000",
+                "denom": "ufury"
+              }
+            ]
+          },
+          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+        }
+      ],
+      "validator_historical_rewards": [
+        {
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": [],
+            "reference_count": 2
+          },
+          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+        }
+      ],
       "validator_slash_events": []
     },
     "earn": {
       "params": {
-        "allowed_vaults": []
+        "allowed_vaults": [
+          {
+            "denom": "usdf",
+            "strategies": [
+              "STRATEGY_TYPE_JINX"
+            ]
+          },
+          {
+            "denom": "ufury",
+            "strategies": [
+              "STRATEGY_TYPE_SAVINGS"
+            ]
+          },
+          {
+            "denom": "bfury",
+            "strategies": [
+              "STRATEGY_TYPE_SAVINGS"
+            ]
+          },
+          {
+            "denom": "erc20/multichain/usdc",
+            "strategies": [
+              "STRATEGY_TYPE_SAVINGS"
+            ]
+          }
+        ]
       },
       "vault_records": [],
       "vault_share_records": []
@@ -13189,7 +14124,56 @@
       "evidence": []
     },
     "evm": {
-      "accounts": [],
+      "accounts": [
+        {
+          "address": "0x0c47dC6aF1d0Cc3310EA60e387941943F99C3B04",
+          "code": "6080604052600436106100a05760003560e01c8063313ce56711610064578063313ce567146101ad57806370a08231146101d857806395d89b4114610215578063a9059cbb14610240578063d0e30db01461027d578063dd62ed3e14610287576100af565b806306fdde03146100b4578063095ea7b3146100df57806318160ddd1461011c57806323b872dd146101475780632e1a7d4d14610184576100af565b366100af576100ad6102c4565b005b600080fd5b3480156100c057600080fd5b506100c961036a565b6040516100d69190610bbe565b60405180910390f35b3480156100eb57600080fd5b5061010660048036038101906101019190610c79565b6103f8565b6040516101139190610cd4565b60405180910390f35b34801561012857600080fd5b506101316104ea565b60405161013e9190610cfe565b60405180910390f35b34801561015357600080fd5b5061016e60048036038101906101699190610d19565b6104f2565b60405161017b9190610cd4565b60405180910390f35b34801561019057600080fd5b506101ab60048036038101906101a69190610d6c565b6108c2565b005b3480156101b957600080fd5b506101c2610a32565b6040516101cf9190610db5565b60405180910390f35b3480156101e457600080fd5b506101ff60048036038101906101fa9190610dd0565b610a45565b60405161020c9190610cfe565b60405180910390f35b34801561022157600080fd5b5061022a610a5d565b6040516102379190610bbe565b60405180910390f35b34801561024c57600080fd5b5061026760048036038101906102629190610c79565b610aeb565b6040516102749190610cd4565b60405180910390f35b6102856102c4565b005b34801561029357600080fd5b506102ae60048036038101906102a99190610dfd565b610b00565b6040516102bb9190610cfe565b60405180910390f35b34600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008282546103139190610e6c565b925050819055503373ffffffffffffffffffffffffffffffffffffffff167fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c346040516103609190610cfe565b60405180910390a2565b6000805461037790610ef1565b80601f01602080910402602001604051908101604052809291908181526020018280546103a390610ef1565b80156103f05780601f106103c5576101008083540402835291602001916103f0565b820191906000526020600020905b8154815290600101906020018083116103d357829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040516104d89190610cfe565b60405180910390a36001905092915050565b600047905090565b600081600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610576576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161056d90610f6f565b60405180910390fd5b3373ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff161415801561064e57507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414155b156107a65781600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610712576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161070990610fdb565b60405180910390fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825461079e9190610ffb565b925050819055505b81600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008282546107f59190610ffb565b9250508190555081600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825461084b9190610e6c565b925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040516108af9190610cfe565b60405180910390a3600190509392505050565b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610944576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161093b90610f6f565b60405180910390fd5b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008282546109939190610ffb565b925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156109e0573d6000803e3d6000fd5b503373ffffffffffffffffffffffffffffffffffffffff167f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b6582604051610a279190610cfe565b60405180910390a250565b600260009054906101000a900460ff1681565b60036020528060005260406000206000915090505481565b60018054610a6a90610ef1565b80601f0160208091040260200160405190810160405280929190818152602001828054610a9690610ef1565b8015610ae35780601f10610ab857610100808354040283529160200191610ae3565b820191906000526020600020905b815481529060010190602001808311610ac657829003601f168201915b505050505081565b6000610af83384846104f2565b905092915050565b6004602052816000526040600020602052806000526040600020600091509150505481565b600081519050919050565b600082825260208201905092915050565b60005b83811015610b5f578082015181840152602081019050610b44565b83811115610b6e576000848401525b50505050565b6000601f19601f8301169050919050565b6000610b9082610b25565b610b9a8185610b30565b9350610baa818560208601610b41565b610bb381610b74565b840191505092915050565b60006020820190508181036000830152610bd88184610b85565b905092915050565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610c1082610be5565b9050919050565b610c2081610c05565b8114610c2b57600080fd5b50565b600081359050610c3d81610c17565b92915050565b6000819050919050565b610c5681610c43565b8114610c6157600080fd5b50565b600081359050610c7381610c4d565b92915050565b60008060408385031215610c9057610c8f610be0565b5b6000610c9e85828601610c2e565b9250506020610caf85828601610c64565b9150509250929050565b60008115159050919050565b610cce81610cb9565b82525050565b6000602082019050610ce96000830184610cc5565b92915050565b610cf881610c43565b82525050565b6000602082019050610d136000830184610cef565b92915050565b600080600060608486031215610d3257610d31610be0565b5b6000610d4086828701610c2e565b9350506020610d5186828701610c2e565b9250506040610d6286828701610c64565b9150509250925092565b600060208284031215610d8257610d81610be0565b5b6000610d9084828501610c64565b91505092915050565b600060ff82169050919050565b610daf81610d99565b82525050565b6000602082019050610dca6000830184610da6565b92915050565b600060208284031215610de657610de5610be0565b5b6000610df484828501610c2e565b91505092915050565b60008060408385031215610e1457610e13610be0565b5b6000610e2285828601610c2e565b9250506020610e3385828601610c2e565b9150509250929050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610e7782610c43565b9150610e8283610c43565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff03821115610eb757610eb6610e3d565b5b828201905092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680610f0957607f821691505b60208210811415610f1d57610f1c610ec2565b5b50919050565b7f57465552593a20616d6f756e74203c2062616c616e6365000000000000000000600082015250565b6000610f59601783610b30565b9150610f6482610f23565b602082019050919050565b60006020820190508181036000830152610f8881610f4c565b9050919050565b7f57465552593a20616c6c6f77616e6365203c20616d6f756e7400000000000000600082015250565b6000610fc5601983610b30565b9150610fd082610f8f565b602082019050919050565b60006020820190508181036000830152610ff481610fb8565b9050919050565b600061100682610c43565b915061101183610c43565b92508282101561102457611023610e3d565b5b82820390509291505056fea26469706673582212201ca8c515832a1983caf448e48199a6fec9164d7375d95cb23a9167b9b198ab2864736f6c63430008090033",
+          "storage": [
+            {
+              "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "value": "0x5772617070656420467572790000000000000000000000000000000000000018"
+            },
+            {
+              "key": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "value": "0x574655525900000000000000000000000000000000000000000000000000000a"
+            },
+            {
+              "key": "0x0000000000000000000000000000000000000000000000000000000000000002",
+              "value": "0x0000000000000000000000000000000000000000000000000000000000000012"
+            }
+          ]
+        },
+        {
+          "address": "0x1F80232f7d9FFEe590b49A2E20359c74F0f092A7",
+          "code": "",
+          "storage": []
+        },
+        {
+          "address": "0x7f277DC7cF8B0A34Ffc2738590D49f57D8Ecd5fb",
+          "code": "",
+          "storage": []
+        },
+        {
+          "address": "0x9b277763809483Fa65F7177Bc8B3af1CbB8AEE46",
+          "code": "",
+          "storage": []
+        },
+        {
+          "address": "0xC12c5BBB1391EF34033F81CA28Fa91F3Cd9E21Fe",
+          "code": "",
+          "storage": []
+        },
+        {
+          "address": "0xc8F47A09330C2c3876f18dea51D61B5b56849567",
+          "code": "608060405234801561001057600080fd5b50600436106100b45760003560e01c806372425d9d1161007157806372425d9d146101a657806386d516e8146101c4578063a8b0574e146101e2578063bce38bd714610200578063c3077fa914610230578063ee82ac5e14610262576100b4565b80630f28c97d146100b9578063252dba42146100d757806327e86d6e14610108578063399542e91461012657806342cbb15c146101585780634d2301cc14610176575b600080fd5b6100c1610292565b6040516100ce91906106a3565b60405180910390f35b6100f160048036038101906100ec91906109d2565b61029a565b6040516100ff929190610b65565b60405180910390f35b610110610423565b60405161011d9190610bae565b60405180910390f35b610140600480360381019061013b9190610c01565b610438565b60405161014f93929190610d6b565b60405180910390f35b610160610457565b60405161016d91906106a3565b60405180910390f35b610190600480360381019061018b9190610da9565b61045f565b60405161019d91906106a3565b60405180910390f35b6101ae610480565b6040516101bb91906106a3565b60405180910390f35b6101cc610488565b6040516101d991906106a3565b60405180910390f35b6101ea610490565b6040516101f79190610de5565b60405180910390f35b61021a60048036038101906102159190610c01565b610498565b6040516102279190610e00565b60405180910390f35b61024a600480360381019061024591906109d2565b610640565b60405161025993929190610d6b565b60405180910390f35b61027c60048036038101906102779190610e4e565b610663565b6040516102899190610bae565b60405180910390f35b600042905090565b60006060439150825167ffffffffffffffff8111156102bc576102bb6106e8565b5b6040519080825280602002602001820160405280156102ef57816020015b60608152602001906001900390816102da5790505b50905060005b835181101561041d5760008085838151811061031457610313610e7b565b5b60200260200101516000015173ffffffffffffffffffffffffffffffffffffffff1686848151811061034957610348610e7b565b5b6020026020010151602001516040516103629190610ee6565b6000604051808303816000865af19150503d806000811461039f576040519150601f19603f3d011682016040523d82523d6000602084013e6103a4565b606091505b5091509150816103e9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103e090610f5a565b60405180910390fd5b808484815181106103fd576103fc610e7b565b5b60200260200101819052505050808061041590610fa9565b9150506102f5565b50915091565b60006001436104329190610ff2565b40905090565b60008060604392504340915061044e8585610498565b90509250925092565b600043905090565b60008173ffffffffffffffffffffffffffffffffffffffff16319050919050565b600044905090565b600045905090565b600041905090565b6060815167ffffffffffffffff8111156104b5576104b46106e8565b5b6040519080825280602002602001820160405280156104ee57816020015b6104db61066e565b8152602001906001900390816104d35790505b50905060005b82518110156106395760008084838151811061051357610512610e7b565b5b60200260200101516000015173ffffffffffffffffffffffffffffffffffffffff1685848151811061054857610547610e7b565b5b6020026020010151602001516040516105619190610ee6565b6000604051808303816000865af19150503d806000811461059e576040519150601f19603f3d011682016040523d82523d6000602084013e6105a3565b606091505b509150915085156105ef57816105ee576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016105e590611098565b60405180910390fd5b5b604051806040016040528083151581526020018281525084848151811061061957610618610e7b565b5b60200260200101819052505050808061063190610fa9565b9150506104f4565b5092915050565b6000806060610650600185610438565b8093508194508295505050509193909250565b600081409050919050565b6040518060400160405280600015158152602001606081525090565b6000819050919050565b61069d8161068a565b82525050565b60006020820190506106b86000830184610694565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610720826106d7565b810181811067ffffffffffffffff8211171561073f5761073e6106e8565b5b80604052505050565b60006107526106be565b905061075e8282610717565b919050565b600067ffffffffffffffff82111561077e5761077d6106e8565b5b602082029050602081019050919050565b600080fd5b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006107c98261079e565b9050919050565b6107d9816107be565b81146107e457600080fd5b50565b6000813590506107f6816107d0565b92915050565b600080fd5b600067ffffffffffffffff82111561081c5761081b6106e8565b5b610825826106d7565b9050602081019050919050565b82818337600083830152505050565b600061085461084f84610801565b610748565b9050828152602081018484840111156108705761086f6107fc565b5b61087b848285610832565b509392505050565b600082601f830112610898576108976106d2565b5b81356108a8848260208601610841565b91505092915050565b6000604082840312156108c7576108c6610794565b5b6108d16040610748565b905060006108e1848285016107e7565b600083015250602082013567ffffffffffffffff81111561090557610904610799565b5b61091184828501610883565b60208301525092915050565b600061093061092b84610763565b610748565b905080838252602082019050602084028301858111156109535761095261078f565b5b835b8181101561099a57803567ffffffffffffffff811115610978576109776106d2565b5b80860161098589826108b1565b85526020850194505050602081019050610955565b5050509392505050565b600082601f8301126109b9576109b86106d2565b5b81356109c984826020860161091d565b91505092915050565b6000602082840312156109e8576109e76106c8565b5b600082013567ffffffffffffffff811115610a0657610a056106cd565b5b610a12848285016109a4565b91505092915050565b600081519050919050565b600082825260208201905092915050565b6000819050602082019050919050565b600081519050919050565b600082825260208201905092915050565b60005b83811015610a81578082015181840152602081019050610a66565b83811115610a90576000848401525b50505050565b6000610aa182610a47565b610aab8185610a52565b9350610abb818560208601610a63565b610ac4816106d7565b840191505092915050565b6000610adb8383610a96565b905092915050565b6000602082019050919050565b6000610afb82610a1b565b610b058185610a26565b935083602082028501610b1785610a37565b8060005b85811015610b535784840389528151610b348582610acf565b9450610b3f83610ae3565b925060208a01995050600181019050610b1b565b50829750879550505050505092915050565b6000604082019050610b7a6000830185610694565b8181036020830152610b8c8184610af0565b90509392505050565b6000819050919050565b610ba881610b95565b82525050565b6000602082019050610bc36000830184610b9f565b92915050565b60008115159050919050565b610bde81610bc9565b8114610be957600080fd5b50565b600081359050610bfb81610bd5565b92915050565b60008060408385031215610c1857610c176106c8565b5b6000610c2685828601610bec565b925050602083013567ffffffffffffffff811115610c4757610c466106cd565b5b610c53858286016109a4565b9150509250929050565b600081519050919050565b600082825260208201905092915050565b6000819050602082019050919050565b610c9281610bc9565b82525050565b6000604083016000830151610cb06000860182610c89565b5060208301518482036020860152610cc88282610a96565b9150508091505092915050565b6000610ce18383610c98565b905092915050565b6000602082019050919050565b6000610d0182610c5d565b610d0b8185610c68565b935083602082028501610d1d85610c79565b8060005b85811015610d595784840389528151610d3a8582610cd5565b9450610d4583610ce9565b925060208a01995050600181019050610d21565b50829750879550505050505092915050565b6000606082019050610d806000830186610694565b610d8d6020830185610b9f565b8181036040830152610d9f8184610cf6565b9050949350505050565b600060208284031215610dbf57610dbe6106c8565b5b6000610dcd848285016107e7565b91505092915050565b610ddf816107be565b82525050565b6000602082019050610dfa6000830184610dd6565b92915050565b60006020820190508181036000830152610e1a8184610cf6565b905092915050565b610e2b8161068a565b8114610e3657600080fd5b50565b600081359050610e4881610e22565b92915050565b600060208284031215610e6457610e636106c8565b5b6000610e7284828501610e39565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600081905092915050565b6000610ec082610a47565b610eca8185610eaa565b9350610eda818560208601610a63565b80840191505092915050565b6000610ef28284610eb5565b915081905092915050565b600082825260208201905092915050565b7f4d756c746963616c6c206167677265676174653a2063616c6c206661696c6564600082015250565b6000610f44602083610efd565b9150610f4f82610f0e565b602082019050919050565b60006020820190508181036000830152610f7381610f37565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610fb48261068a565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610fe757610fe6610f7a565b5b600182019050919050565b6000610ffd8261068a565b91506110088361068a565b92508282101561101b5761101a610f7a565b5b828203905092915050565b7f4d756c746963616c6c32206167677265676174653a2063616c6c206661696c6560008201527f6400000000000000000000000000000000000000000000000000000000000000602082015250565b6000611082602183610efd565b915061108d82611026565b604082019050919050565b600060208201905081810360008301526110b181611075565b905091905056fea2646970667358221220abd9cadc14e2f74213535fd9ad887c7bdc5f4ea6aa73d9aedcb1f0513098ea8e64736f6c63430008090033",
+          "storage": []
+        },
+        {
+          "address": "0xD8644EFe37618CF0f003CD9854731835Fe20b84f",
+          "code": "608060405234801561001057600080fd5b50600436106100885760003560e01c806372425d9d1161005b57806372425d9d1461012a57806386d516e814610148578063a8b0574e14610166578063ee82ac5e1461018457610088565b80630f28c97d1461008d578063252dba42146100ab57806327e86d6e146100dc5780634d2301cc146100fa575b600080fd5b6100956101b4565b6040516100a29190610381565b60405180910390f35b6100c560048036038101906100c091906106b0565b6101bc565b6040516100d3929190610843565b60405180910390f35b6100e461030f565b6040516100f1919061088c565b60405180910390f35b610114600480360381019061010f91906108a7565b610324565b6040516101219190610381565b60405180910390f35b610132610345565b60405161013f9190610381565b60405180910390f35b61015061034d565b60405161015d9190610381565b60405180910390f35b61016e610355565b60405161017b91906108e3565b60405180910390f35b61019e6004803603810190610199919061092a565b61035d565b6040516101ab919061088c565b60405180910390f35b600042905090565b60006060439150825167ffffffffffffffff8111156101de576101dd6103c6565b5b60405190808252806020026020018201604052801561021157816020015b60608152602001906001900390816101fc5790505b50905060005b83518110156103095760008085838151811061023657610235610957565b5b60200260200101516000015173ffffffffffffffffffffffffffffffffffffffff1686848151811061026b5761026a610957565b5b60200260200101516020015160405161028491906109c2565b6000604051808303816000865af19150503d80600081146102c1576040519150601f19603f3d011682016040523d82523d6000602084013e6102c6565b606091505b5091509150816102d557600080fd5b808484815181106102e9576102e8610957565b5b60200260200101819052505050808061030190610a08565b915050610217565b50915091565b600060014361031e9190610a51565b40905090565b60008173ffffffffffffffffffffffffffffffffffffffff16319050919050565b600044905090565b600045905090565b600041905090565b600081409050919050565b6000819050919050565b61037b81610368565b82525050565b60006020820190506103966000830184610372565b92915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6103fe826103b5565b810181811067ffffffffffffffff8211171561041d5761041c6103c6565b5b80604052505050565b600061043061039c565b905061043c82826103f5565b919050565b600067ffffffffffffffff82111561045c5761045b6103c6565b5b602082029050602081019050919050565b600080fd5b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006104a78261047c565b9050919050565b6104b78161049c565b81146104c257600080fd5b50565b6000813590506104d4816104ae565b92915050565b600080fd5b600067ffffffffffffffff8211156104fa576104f96103c6565b5b610503826103b5565b9050602081019050919050565b82818337600083830152505050565b600061053261052d846104df565b610426565b90508281526020810184848401111561054e5761054d6104da565b5b610559848285610510565b509392505050565b600082601f830112610576576105756103b0565b5b813561058684826020860161051f565b91505092915050565b6000604082840312156105a5576105a4610472565b5b6105af6040610426565b905060006105bf848285016104c5565b600083015250602082013567ffffffffffffffff8111156105e3576105e2610477565b5b6105ef84828501610561565b60208301525092915050565b600061060e61060984610441565b610426565b905080838252602082019050602084028301858111156106315761063061046d565b5b835b8181101561067857803567ffffffffffffffff811115610656576106556103b0565b5b808601610663898261058f565b85526020850194505050602081019050610633565b5050509392505050565b600082601f830112610697576106966103b0565b5b81356106a78482602086016105fb565b91505092915050565b6000602082840312156106c6576106c56103a6565b5b600082013567ffffffffffffffff8111156106e4576106e36103ab565b5b6106f084828501610682565b91505092915050565b600081519050919050565b600082825260208201905092915050565b6000819050602082019050919050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561075f578082015181840152602081019050610744565b8381111561076e576000848401525b50505050565b600061077f82610725565b6107898185610730565b9350610799818560208601610741565b6107a2816103b5565b840191505092915050565b60006107b98383610774565b905092915050565b6000602082019050919050565b60006107d9826106f9565b6107e38185610704565b9350836020820285016107f585610715565b8060005b85811015610831578484038952815161081285826107ad565b945061081d836107c1565b925060208a019950506001810190506107f9565b50829750879550505050505092915050565b60006040820190506108586000830185610372565b818103602083015261086a81846107ce565b90509392505050565b6000819050919050565b61088681610873565b82525050565b60006020820190506108a1600083018461087d565b92915050565b6000602082840312156108bd576108bc6103a6565b5b60006108cb848285016104c5565b91505092915050565b6108dd8161049c565b82525050565b60006020820190506108f860008301846108d4565b92915050565b61090781610368565b811461091257600080fd5b50565b600081359050610924816108fe565b92915050565b6000602082840312156109405761093f6103a6565b5b600061094e84828501610915565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600081905092915050565b600061099c82610725565b6109a68185610986565b93506109b6818560208601610741565b80840191505092915050565b60006109ce8284610991565b915081905092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610a1382610368565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff821415610a4657610a456109d9565b5b600182019050919050565b6000610a5c82610368565b9150610a6783610368565b925082821015610a7a57610a796109d9565b5b82820390509291505056fea2646970667358221220bcbfee4fd7a7c7b0329ee9342e54104e21b7586f931c591ec19433806f8a803864736f6c63430008090033",
+          "storage": []
+        }
+      ],
       "params": {
         "evm_denom": "afury",
         "enable_create": true,
@@ -13209,22 +14193,556 @@
           "istanbul_block": "0",
           "muir_glacier_block": "0",
           "berlin_block": "0",
-          "london_block": "0",
-          "arrow_glacier_block": "0",
-          "gray_glacier_block": "0",
-          "merge_netsplit_block": "0",
-          "shanghai_block": "0",
-          "cancun_block": "0"
+          "london_block": null,
+          "arrow_glacier_block": null,
+          "gray_glacier_block": null,
+          "merge_netsplit_block": null,
+          "shanghai_block": null,
+          "cancun_block": null
         },
-        "eip712_allowed_msgs": [],
+        "eip712_allowed_msgs": [
+          {
+            "msg_type_url": "/fury.evmutil.v1beta1.MsgConvertERC20ToCoin",
+            "msg_value_type_name": "MsgValueEVMConvertERC20ToCoin",
+            "value_types": [
+              {
+                "name": "initiator",
+                "type": "string"
+              },
+              {
+                "name": "receiver",
+                "type": "string"
+              },
+              {
+                "name": "fury_erc20_address",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "string"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.evmutil.v1beta1.MsgConvertCoinToERC20",
+            "msg_value_type_name": "MsgValueEVMConvertCoinToERC20",
+            "value_types": [
+              {
+                "name": "initiator",
+                "type": "string"
+              },
+              {
+                "name": "receiver",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.earn.v1beta1.MsgDeposit",
+            "msg_value_type_name": "MsgValueEarnDeposit",
+            "value_types": [
+              {
+                "name": "depositor",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              },
+              {
+                "name": "strategy",
+                "type": "int32"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.earn.v1beta1.MsgWithdraw",
+            "msg_value_type_name": "MsgValueEarnWithdraw",
+            "value_types": [
+              {
+                "name": "from",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              },
+              {
+                "name": "strategy",
+                "type": "int32"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/cosmos.staking.v1beta1.MsgDelegate",
+            "msg_value_type_name": "MsgValueStakingDelegate",
+            "value_types": [
+              {
+                "name": "delegator_address",
+                "type": "string"
+              },
+              {
+                "name": "validator_address",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/cosmos.staking.v1beta1.MsgUndelegate",
+            "msg_value_type_name": "MsgValueStakingUndelegate",
+            "value_types": [
+              {
+                "name": "delegator_address",
+                "type": "string"
+              },
+              {
+                "name": "validator_address",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/cosmos.staking.v1beta1.MsgBeginRedelegate",
+            "msg_value_type_name": "MsgValueStakingBeginRedelegate",
+            "value_types": [
+              {
+                "name": "delegator_address",
+                "type": "string"
+              },
+              {
+                "name": "validator_src_address",
+                "type": "string"
+              },
+              {
+                "name": "validator_dst_address",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimUSDFMintingReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimUSDFMintingReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "multiplier_name",
+                "type": "string"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimJinxReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimJinxReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "denoms_to_claim",
+                "type": "IncentiveSelection[]"
+              }
+            ],
+            "nested_types": [
+              {
+                "name": "IncentiveSelection",
+                "attrs": [
+                  {
+                    "name": "denom",
+                    "type": "string"
+                  },
+                  {
+                    "name": "multiplier_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimDelegatorReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimDelegatorReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "denoms_to_claim",
+                "type": "IncentiveSelection[]"
+              }
+            ],
+            "nested_types": [
+              {
+                "name": "IncentiveSelection",
+                "attrs": [
+                  {
+                    "name": "denom",
+                    "type": "string"
+                  },
+                  {
+                    "name": "multiplier_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimSwapReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimSwapReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "denoms_to_claim",
+                "type": "IncentiveSelection[]"
+              }
+            ],
+            "nested_types": [
+              {
+                "name": "IncentiveSelection",
+                "attrs": [
+                  {
+                    "name": "denom",
+                    "type": "string"
+                  },
+                  {
+                    "name": "multiplier_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimSavingsReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimSavingsReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "denoms_to_claim",
+                "type": "IncentiveSelection[]"
+              }
+            ],
+            "nested_types": [
+              {
+                "name": "IncentiveSelection",
+                "attrs": [
+                  {
+                    "name": "denom",
+                    "type": "string"
+                  },
+                  {
+                    "name": "multiplier_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "msg_type_url": "/fury.incentive.v1beta1.MsgClaimEarnReward",
+            "msg_value_type_name": "MsgValueIncentiveClaimEarnReward",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "denoms_to_claim",
+                "type": "IncentiveSelection[]"
+              }
+            ],
+            "nested_types": [
+              {
+                "name": "IncentiveSelection",
+                "attrs": [
+                  {
+                    "name": "denom",
+                    "type": "string"
+                  },
+                  {
+                    "name": "multiplier_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "msg_type_url": "/fury.router.v1beta1.MsgMintDeposit",
+            "msg_value_type_name": "MsgValueRouterMintDeposit",
+            "value_types": [
+              {
+                "name": "depositor",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.router.v1beta1.MsgDelegateMintDeposit",
+            "msg_value_type_name": "MsgValueRouterDelegateMintDeposit",
+            "value_types": [
+              {
+                "name": "depositor",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.router.v1beta1.MsgWithdrawBurn",
+            "msg_value_type_name": "MsgValueRouterWithdrawBurn",
+            "value_types": [
+              {
+                "name": "from",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.router.v1beta1.MsgWithdrawBurnUndelegate",
+            "msg_value_type_name": "MsgValueRouterWithdrawBurnUndelegate",
+            "value_types": [
+              {
+                "name": "from",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/cosmos.gov.v1beta1.MsgVote",
+            "msg_value_type_name": "MsgValueGovVote",
+            "value_types": [
+              {
+                "name": "proposal_id",
+                "type": "uint64"
+              },
+              {
+                "name": "voter",
+                "type": "string"
+              },
+              {
+                "name": "option",
+                "type": "int32"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/cosmos.bank.v1beta1.MsgSend",
+            "msg_value_type_name": "MsgValueBankSend",
+            "value_types": [
+              {
+                "name": "from_address",
+                "type": "string"
+              },
+              {
+                "name": "to_address",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin[]"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.liquid.v1beta1.MsgMintDerivative",
+            "msg_value_type_name": "MsgValueMintDerivative",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.liquid.v1beta1.MsgBurnDerivative",
+            "msg_value_type_name": "MsgValueBurnDerivative",
+            "value_types": [
+              {
+                "name": "sender",
+                "type": "string"
+              },
+              {
+                "name": "validator",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.jinx.v1beta1.MsgWithdraw",
+            "msg_value_type_name": "MsgValueJinxWithdraw",
+            "value_types": [
+              {
+                "name": "depositor",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin[]"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.jinx.v1beta1.MsgDeposit",
+            "msg_value_type_name": "MsgValueJinxDeposit",
+            "value_types": [
+              {
+                "name": "depositor",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin[]"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.evmutil.v1beta1.MsgConvertCosmosCoinToERC20",
+            "msg_value_type_name": "MsgConvertCosmosCoinToERC20",
+            "value_types": [
+              {
+                "name": "initiator",
+                "type": "string"
+              },
+              {
+                "name": "receiver",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          },
+          {
+            "msg_type_url": "/fury.evmutil.v1beta1.MsgConvertCosmosCoinFromERC20",
+            "msg_value_type_name": "MsgConvertCosmosCoinFromERC20",
+            "value_types": [
+              {
+                "name": "initiator",
+                "type": "string"
+              },
+              {
+                "name": "receiver",
+                "type": "string"
+              },
+              {
+                "name": "amount",
+                "type": "Coin"
+              }
+            ],
+            "nested_types": []
+          }
+        ],
         "allow_unprotected_txs": false
       }
     },
     "evmutil": {
       "accounts": [],
       "params": {
-        "enabled_conversion_pairs": [],
-        "allowed_cosmos_denoms": []
+        "enabled_conversion_pairs": [
+          {
+            "fury_erc20_address": "0xce6d41e1c21e73c53f391a942d49e1a6860c3325",
+            "denom": "erc20/multichain/usdc"
+          }
+        ],
+        "allowed_cosmos_denoms": [
+          {
+            "cosmos_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+            "name": "Fury-wrapped ATOM",
+            "symbol": "ATOM",
+            "decimals": 6
+          }
+        ]
       }
     },
     "feemarket": {
@@ -13252,7 +14770,70 @@
       "previous_block_time": "1970-01-01T00:00:01Z"
     },
     "genutil": {
-      "gen_txs": []
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "validator",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
+                "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "/iEtt5/G+7hUT4FJ4p29yi2DCRut5Bm1Zx6doestjUA="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "1000000000"
+                }
+              }
+            ],
+            "memo": "461d9761df5db0a112407ca8a82f1774ef2dbaa3@10.140.0.3:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A2nYuYAWXBGtTb1ztklHmpiHg3X4u/UHPw7Ot6xozFVJ"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "1AjontU8qbiIv/bzi/s7zB+QcuvYPdeA/ZYBTfqipJR2nk+DoKZDY8I1md6x2h34g7I7TcFfN+4VtD4esW2D3w=="
+          ]
+        }
+      ]
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -13378,14 +14959,14 @@
     "liquid": {},
     "mint": {
       "minter": {
-        "inflation": "0.130000000000000000",
-        "annual_provisions": "0.000000000000000000"
+        "inflation": "0.000000000000000001",
+        "annual_provisions": "0.000000000000010000"
       },
       "params": {
         "mint_denom": "ufury",
-        "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
+        "inflation_rate_change": "0.000000000000000001",
+        "inflation_max": "0.000000000000000010",
+        "inflation_min": "0.000000000000000001",
         "goal_bonded": "0.670000000000000000",
         "blocks_per_year": "6311520"
       }
@@ -13400,7 +14981,9 @@
     "router": {},
     "savings": {
       "params": {
-        "supported_denoms": []
+        "supported_denoms": [
+          "bfury-furyvaloper1ffv7nhd3z6sych2qpqkk03ec6hzkmufyz4scd0"
+        ]
       },
       "deposits": []
     },
