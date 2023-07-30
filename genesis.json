@@ -127,7 +127,7 @@
               "@type": "/cosmos.crypto.secp256k1.PubKey",
               "key": "A2nYuYAWXBGtTb1ztklHmpiHg3X4u/UHPw7Ot6xozFVJ"
             },
-            "sequence": "1"
+            "sequence": "0"
           },
           "code_hash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
         },
@@ -6133,15 +6133,6 @@
           ]
         },
         {
-          "address": "fury1fl48vsnmsdzcv85q5d2q4z5ajdha8yu39sqq2c",
-          "coins": [
-            {
-              "amount": "1000000000",
-              "denom": "ufury"
-            }
-          ]
-        },
-        {
           "address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
           "coins": [
             {
@@ -6158,7 +6149,7 @@
           "address": "fury1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8h5dn6s",
           "coins": [
             {
-              "amount": "5000000000000",
+              "amount": "26000000000000",
               "denom": "ufury"
             }
           ]
@@ -9781,15 +9772,6 @@
             {
               "denom": "ufury",
               "amount": "1803667062"
-            }
-          ]
-        },
-        {
-          "address": "fury10raryamstkh9f0vh9m99ejmmz53r8pzk33zqdf",
-          "coins": [
-            {
-              "denom": "ufury",
-              "amount": "5000000000000"
             }
           ]
         },
@@ -14013,20 +13995,20 @@
     "distribution": {
       "delegator_starting_infos": [
         {
-          "delegator_address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
+          "delegator_address": "fury13m2r2pj5uw2d648ze7qzaws8qt3lznpq86ymes",
           "starting_info": {
             "height": "0",
             "previous_period": "1",
             "stake": "1000000000.000000000000000000"
           },
-          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+          "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp"
         }
       ],
       "delegator_withdraw_infos": [],
       "fee_pool": {
         "community_pool": [
           {
-            "amount": "26000000000000.840000000000000000",
+            "amount": "26000000000000",
             "denom": "ufury"
           }
         ]
@@ -14035,11 +14017,11 @@
         {
           "outstanding_rewards": [
             {
-              "amount": "5000000000000.160000000000000000",
+              "amount": "0",
               "denom": "ufury"
             }
           ],
-          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+          "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp"
         }
       ],
       "params": {
@@ -14048,18 +14030,18 @@
         "community_tax": "0.020000000000000000",
         "withdraw_addr_enabled": true
       },
-      "previous_proposer": "furyvalcons1k59dqd8kd5pe9uueweay3qkjrdskq0myxrkhp2",
+      "previous_proposer": "furyvalcons13m2r2pj5uw2d648ze7qzaws8qt3lznpqlr4jqq",
       "validator_accumulated_commissions": [
         {
           "accumulated": {
             "commission": [
               {
-                "amount": "5000000000000.916000000000000000",
+                "amount": "0.916000000000000000",
                 "denom": "ufury"
               }
             ]
           },
-          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+          "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp"
         }
       ],
       "validator_current_rewards": [
@@ -14073,7 +14055,7 @@
               }
             ]
           },
-          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+          "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp"
         }
       ],
       "validator_historical_rewards": [
@@ -14083,7 +14065,7 @@
             "cumulative_reward_ratio": [],
             "reference_count": 2
           },
-          "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw"
+          "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp"
         }
       ],
       "validator_slash_events": []
@@ -14777,7 +14759,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "validator",
+                  "moniker": "fury-mainnet",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
@@ -14789,19 +14771,19 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "fury10unhm3703v9rfl7zwwzep4yl2lvwe40my43ehl",
-                "validator_address": "furyvaloper10unhm3703v9rfl7zwwzep4yl2lvwe40mglnvzw",
+                "delegator_address": "fury13m2r2pj5uw2d648ze7qzaws8qt3lznpq86ymes",
+                "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "/iEtt5/G+7hUT4FJ4p29yi2DCRut5Bm1Zx6doestjUA="
+                  "key": "U0veMHH0It/IeRWBmCQCmQQJnHvRqNlSTU+O4o+GTK0="
                 },
                 "value": {
                   "denom": "ufury",
-                  "amount": "1000000000"
+                  "amount": "2000000000"
                 }
               }
             ],
-            "memo": "461d9761df5db0a112407ca8a82f1774ef2dbaa3@10.140.0.3:26656",
+            "memo": "270ea64b6c5d0076a540d16b8a40b79a5335e26e@10.142.0.12:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -14811,7 +14793,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "A2nYuYAWXBGtTb1ztklHmpiHg3X4u/UHPw7Ot6xozFVJ"
+                  "key": "Azf1s0w6jgUIblxemiJyeQnJRsa0YNloD0bH0ctSjLsL"
                 },
                 "mode_info": {
                   "single": {
@@ -14830,7 +14812,565 @@
             "tip": null
           },
           "signatures": [
-            "1AjontU8qbiIv/bzi/s7zB+QcuvYPdeA/ZYBTfqipJR2nk+DoKZDY8I1md6x2h34g7I7TcFfN+4VtD4esW2D3w=="
+            "NaRTp6CVlxNApm5gGPAjUZdVRFo7KgZFw+Jwff7cdRUm3PMBL/S3Ee4RNCtmR4+3jHPWV6Sq/qfbwpOsd8IsxA=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1386sxfvrg0cfc8amwyltx9mgyjgruy0u2fm6up",
+                "validator_address": "furyvaloper1386sxfvrg0cfc8amwyltx9mgyjgruy0uxre0fs",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "emfuMCNm1Fdjah2QPlzkM1cI5IYFvpmqpW+5yzWq0q0="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "4be932211ef540b6b9d4df5a5297eee7bb6b7490@10.160.0.10:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AnKvlqPmMoPZBeS2jCqPLOzQ9fnlPaikB1tY88t2U8YI"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "LAGGdnRKItaM4cfopjkyz9LGr8ChhnRmqgo8rTdlAjYmhdAkfQ0j0ycGLnmBFWxhwcna602OmsUTSVPhfLzTFw=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uwq23sk",
+                "validator_address": "furyvaloper1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uz2gy98",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "jjJbuvbeP+YwaI86hBE+NjZhMgd67vF/Aqsem/KV4M0="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "5d3baae995b0b48127aab03a244c3e7f03b5f0a4@10.208.0.14:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A5gwAxfOIR/GKiozZmahG5G4JOmV1opjpBbe7jJTLKcQ"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "xl0YnvCBZPxaH0KN9buekUmi8x3NN13j/fTgnYsj/Zxc5D/qppOisgau+Rk/87AKlqiERE0iFOdN6ASby3kgSQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1v2autl0en5q3988g7mp8gkuewulhq39sn7f402",
+                "validator_address": "furyvaloper1v2autl0en5q3988g7mp8gkuewulhq39sl5tq6m",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "+VRnlXEgGNvtI8CznXJRiH0euhmKy1FvpWgupdu395Q="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "6c98b23e6dff137e316d04d8cd872621841aa068@10.146.0.15:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AsihldlwQ2wSEx5gPE++XFVeyHN3zgIz5aQzD/7AAWDB"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "uxKI1Ylp6SV6QtN57MW/N5rbdOeakKp29DtAxXMTDZ0oiyY5nxbmR18fl20EnWkWp2K4sTOwqeRcMUz+BqZTlQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1ktn9xg9p5kwatcpy0mnkgjw3we5w5g9jnzz30s",
+                "validator_address": "furyvaloper1ktn9xg9p5kwatcpy0mnkgjw3we5w5g9jlgqy6p",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "TMYcNIF/bqkIdFC57Lz1djHCYv5vrJsWnwZTpf9ghfk="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "7a0aaf18e4014fd84025ee16f61408ec0c4dac04@10.148.0.9:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A4o5wKu8XT88hs+gsZkuRTjrUprUjblIANtrEO12E+a/"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "NOooQSryEAc/KFaSlonMKs3bjrxN+o41mqCx6SWMpaUXpGCdsRUR/BH+NYuLn5ind2aKxzCSnSb7F1qiDOv9cw=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1eprkzl4h27za3tc59f54090ygqvf5krlyddpyp",
+                "validator_address": "furyvaloper1eprkzl4h27za3tc59f54090ygqvf5krlg8053s",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "IAZY628eh0oic8KXJpPahRQME31b8/td/tV+60+NeZM="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "8d56fecf3931d012d774799b3708e21bcdb94b0a@10.142.0.7:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A/31bNYPvtIcAL515t2J2g0a4mPIL/FR38Vr7qLySBCg"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "wwybbv/5IMR7bRO0/iwQQFPjyfmoltV47rO+5SbNE/dyPIDndPsckhw2ymyaMoxtqoYPIiGensZ9Sy60iFy8/g=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury17hpz5keuv6wgecx7vfwyaexse6n6ml60cru9qg",
+                "validator_address": "furyvaloper17hpz5keuv6wgecx7vfwyaexse6n6ml605f7s4e",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "dm4JQQXwolz5n+WuLY1NGNDWmbElBUKYwctpH5vsxlU="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "900c37d04a0de0837f936a51cf99e75d0b19ec98@10.148.0.11:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AlRPyWczLntu63kDHLoPFNchapJWeRGD/uH+L3+3gPMA"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "IXDifVLl1LwGtw6kjbZs+BqsC0DfVCN4qFMVNcz3c+lSIUZsJou1sAlvpZ7A4GcybCimMOEbLOKT1UBRZe9hig=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1dpwtjz2hfm9t9rxtassex3hpsx7nm66y9sehuw",
+                "validator_address": "furyvaloper1dpwtjz2hfm9t9rxtassex3hpsx7nm66yf6mzfl",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "QR2wsxQRskb5XKBzY2Btsb+qwQs4P4UdyXzvYhQCtq8="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "a8c5d38e16bc869fec2d706376303aebf6e23cce@10.170.0.2:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A9WwSTtPgmqVFFQ7fzonUtwwzKnZ5okDByMryRRUJRH0"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "ByB7v7tM1YWhLGeGrANpb8m6a1EhgD1zNWliF+BvRS9QbTN54R+nKlKwvpKj9nvAgh49GyrS+OBfde1zVVTbJg=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1lk3w0uuprp3vf5hq9t5cau07lkcmx2qcfxm7mk",
+                "validator_address": "furyvaloper1lk3w0uuprp3vf5hq9t5cau07lkcmx2qc9vetw8",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "REpOf+E6AIkC7NXffiKevt8ZoglkF5DK92csN6osA70="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "b46079fc7b5a42bae6371ea500b56a4726fac21e@10.164.0.5:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A4sJGL2Ejrxw01BnK1tpMv8AeWAcYrvCBmMCJFRLMjaM"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "aCmVuijpEnfGQuL5sQBI8U+RyrWQM6urDsIUvDQuN+5xut/5HVIZsd7tpNkB9AC8jXZqHpPSEM7UnhvhlYb4FA=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1fedzahsdqgpugktarpdathxas9ugv84ug3kp4z",
+                "validator_address": "furyvaloper1fedzahsdqgpugktarpdathxas9ugv84uym55qn",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "C8KIPjOBzkt2o0V+HrLagA2RJr5Tr4g9V8ZXl+lmkhg="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "2000000000"
+                }
+              }
+            ],
+            "memo": "ec929b53f2badaf3875ac168ad192a5cab70f2b1@10.164.0.13:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "ApwrMdJfnlrsAU/uvKfPY3nQWx2vfBSHzcwgpYABQFlX"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "x+n400IO2jD+QHFqewuGt20PbBzNxT5EgViYYWp/1gRc/+2oDjpMSvKnZZlfF0e8DsouTJ2CVrAWf2MKj+qbjA=="
           ]
         }
       ]
@@ -14974,15 +15514,427 @@
     "params": null,
     "pricefeed": {
       "params": {
-        "markets": []
+        "markets": [
+          {
+            "active": true,
+            "base_asset": "bnb",
+            "market_id": "bnb:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "bnb",
+            "market_id": "bnb:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "btc",
+            "market_id": "btc:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "btc",
+            "market_id": "btc:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "xrp",
+            "market_id": "xrp:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "xrp",
+            "market_id": "xrp:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "busd",
+            "market_id": "busd:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "busd",
+            "market_id": "busd:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "fury",
+            "market_id": "fury:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "fury",
+            "market_id": "fury:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "jinx",
+            "market_id": "jinx:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "jinx",
+            "market_id": "jinx:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "atom",
+            "market_id": "atom:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "atom",
+            "market_id": "atom:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "osmo",
+            "market_id": "osmo:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "osmo",
+            "market_id": "osmo:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "akt",
+            "market_id": "akt:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "akt",
+            "market_id": "akt:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "luna",
+            "market_id": "luna:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "luna",
+            "market_id": "luna:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "usdf",
+            "market_id": "usdf:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "usdf",
+            "market_id": "usdf:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "usdf",
+            "market_id": "usdf:usd:720",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "jinxy",
+            "market_id": "jinxy:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "jinxy",
+            "market_id": "jinxy:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "erc20/multichain/usdc",
+            "market_id": "erc20/multichain/usdc:usd",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          },
+          {
+            "active": true,
+            "base_asset": "erc20/multichain/usdc",
+            "market_id": "erc20/multichain/usdc:usd:30",
+            "oracles": [
+              "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk"
+            ],
+            "quote_asset": "usd"
+          }
+        ]
       },
-      "posted_prices": []
+      "posted_prices": [
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "bnb:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "215.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "bnb:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "217.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "btc:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "29500.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "btc:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "28500.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "akt:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "akt:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "osmo:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "4.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "osmo:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "4.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "luna:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "92.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "luna:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "92.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "atom:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "24.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "atom:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "24.962650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "xrp:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "0.552650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "xrp:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "0.552650000000001782"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "busd:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "busd:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "usdf:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "usdf:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "usdf:usd:720",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "fury:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "3.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "fury:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "3.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "jinx:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "0.500000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "jinx:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "0.500000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "jinxy:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "2.150000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "jinxy:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "2.150000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "erc20/multichain/usdc:usd",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        },
+        {
+          "expiry": "2023-07-20T00:00:00Z",
+          "market_id": "erc20/multichain/usdc:usd:30",
+          "oracle_address": "fury17cds5nez6yv2wsjftnsn39hjk7uyj05fd7v0tk",
+          "price": "1.000000000000000000"
+        }
+      ]
     },
     "router": {},
     "savings": {
       "params": {
         "supported_denoms": [
-          "bfury-furyvaloper1ffv7nhd3z6sych2qpqkk03ec6hzkmufyz4scd0"
+          "usdf",
+          "ufury",
+          "jinx",
+          "jinxy",
+          "bfury",
+          "erc20/multichain/usdc"
         ]
       },
       "deposits": []
