@@ -14752,7 +14752,380 @@
       "previous_block_time": "1970-01-01T00:00:01Z"
     },
     "genutil": {
-      "gen_txs": []
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury17hpz5keuv6wgecx7vfwyaexse6n6ml60cru9qg",
+                "validator_address": "furyvaloper17hpz5keuv6wgecx7vfwyaexse6n6ml605f7s4e",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "A+uTdO5uz27czWe2rAjA1r3cgY2Gc78m1bBLW+p03Pc="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "207dc198bf5c453d8a0ab95ad333d29c133819ea@10.148.0.11:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AlRPyWczLntu63kDHLoPFNchapJWeRGD/uH+L3+3gPMA"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "aMYAwe1LaelYk4K0r2nnQ7YPZeLcpUwEKN8M4qe7f3hnPJNr/yxEzwzwMVceVVuOt9nIlfHJ+oNSkjVgMskOPg=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1fedzahsdqgpugktarpdathxas9ugv84ug3kp4z",
+                "validator_address": "furyvaloper1fedzahsdqgpugktarpdathxas9ugv84uym55qn",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "mHOCvjOvSBG6jNSI/1bAhdl2JSgFX5Z2c3fk0oIeHII="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "6a9a4fd22b82863bf776b816a0494bc57cb0c5e2@10.164.0.13:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "ApwrMdJfnlrsAU/uvKfPY3nQWx2vfBSHzcwgpYABQFlX"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "mM8WkhCcYHKTIFQ5WM+hmt+iO62gPTVZTHfMtmCz8vYsGfyj0mAIIIR32H+HRCy3KeNl0uXlNSLO5Slp40bbyQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1386sxfvrg0cfc8amwyltx9mgyjgruy0u2fm6up",
+                "validator_address": "furyvaloper1386sxfvrg0cfc8amwyltx9mgyjgruy0uxre0fs",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "Y0LRKQUCLGfEWYjUe95praEWhAlpxGOlG0kADJdaXnk="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "8676b481689c3c22bfd584a953a2aff6ec5fa46a@10.160.0.10:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AnKvlqPmMoPZBeS2jCqPLOzQ9fnlPaikB1tY88t2U8YI"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "GXvViXezd1dc1LuDsXUWzZGcXDAbZdck4MDY1yva/0oGZUuqlODUmDr4Ltx6NKR4PA+FRYD07GoW7r18zpYxhQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury13m2r2pj5uw2d648ze7qzaws8qt3lznpq86ymes",
+                "validator_address": "furyvaloper13m2r2pj5uw2d648ze7qzaws8qt3lznpqtsxwvp",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "hIz3b9/Dxtrpzm0XpL1gEaG7jw5GWF9TNL73L1A0r8c="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "8b7e07bee7d3681f48a518985c5729844d5b346d@10.142.0.12:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "Azf1s0w6jgUIblxemiJyeQnJRsa0YNloD0bH0ctSjLsL"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "Bpj3uVLw76hzZP9RmQocQr0/Vl2f6p4gspHfz2iQjXh8miYCts3SIpCmhSGVOrN6USlXyzKIVYy0thmimFd3aw=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1v2autl0en5q3988g7mp8gkuewulhq39sn7f402",
+                "validator_address": "furyvaloper1v2autl0en5q3988g7mp8gkuewulhq39sl5tq6m",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "PG/4hezyievpWiy9TcKpdnnI0VU0+8j/s5vOwItsrw0="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "c3bd698b99199a263d4283e0a3bb494b87ccd756@10.146.0.15:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "AsihldlwQ2wSEx5gPE++XFVeyHN3zgIz5aQzD/7AAWDB"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "amCQIk8r1hOktUUSsNh2AILXLjUMTch54uie4ME1MgJ7Ro06ndPZxkJ/3zEIYYbcLhvn+qJsprmIZrJhwtERhQ=="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "fury-mainnet",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "fury1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uwq23sk",
+                "validator_address": "furyvaloper1vl6ar7pr4zmnrp3q8enu6em8qwhpup7uz2gy98",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "qNDH03gvbPYROj7lHnpzzg14KAyfipNpR2YJPWPEZBc="
+                },
+                "value": {
+                  "denom": "ufury",
+                  "amount": "20000000000"
+                }
+              }
+            ],
+            "memo": "f120924a467c983e5e4ab3685bd8bcc1af51e148@10.208.0.14:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A5gwAxfOIR/GKiozZmahG5G4JOmV1opjpBbe7jJTLKcQ"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "cOyayqB8WpL6J2bUFhkZwK1iascZXmHXX8iqn2SgMzVWdKiic33DKsBPrjpT2zTXdDswI7YFwSPaI9jmuCN6vQ=="
+          ]
+        }
+      ]
     },
     "gov": {
       "starting_proposal_id": "1",
