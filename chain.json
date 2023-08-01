@@ -1,0 +1,99 @@
+{
+  "$schema": "../chain.schema.json",
+  "chain_name": "blackfury",
+  "status": "live",
+  "network_type": "mainnet",
+  "website": "https://www.fury.fan/",
+  "pretty_name": "Fury",
+  "chain_id": "highbury_710-10",
+  "bech32_prefix": "fury",
+  "daemon_name": "fury",
+  "node_home": "$HOME/.fury",
+  "slip44": 459,
+  "alternative_slip44s": [
+    118
+  ],
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "ufury",
+        "low_gas_price": 0.05,
+        "average_gas_price": 0.1,
+        "high_gas_price": 0.25
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {
+        "denom": "ufury"
+      }
+    ]
+  },
+  "codebase": {
+    "git_repo": "https://github.com/four4two/fury/",
+    "recommended_version": "v0.21.0",
+    "compatible_versions": [
+      "v0.21.0"
+    ],
+    "genesis": {
+      "genesis_url": "https://github.com/four4two/fury-mainnet/genesis.json"
+    },
+    "versions": [
+      {
+        "name": "v0.4.1",
+        "recommended_version": "v0.4.1",
+        "compatible_versions": [
+          "v0.4.1"
+        ]
+      }
+    ]
+  },
+  "logo_URIs": {
+    "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/fury/images/fury.png",
+    "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/fury/images/fury.svg"
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "5cbdd0e361fc1c5aa9f1312aa895c035e17e30dd",
+        "address": "35.200.155.236:26656",
+        "provider": "Fanfury"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://rpc.fury.black",
+        "provider": "fury"
+      },
+      {
+        "address": "https://gridiron.fury.black",
+        "provider": "fury"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://api.fury.black/",
+        "provider": "fury"
+      },
+      {
+        "address": "https://rest.fury.black",
+        "provider": "fury"
+      }
+    ],
+    "grpc": [
+      {
+        "address": "grpc.fury.black",
+        "provider": "fury"
+      }
+    ]
+  },
+  "explorers": [
+    {
+      "kind": "blockscout",
+      "url": "https://explorer.fury.black"
+    }
+  ]
+}
